@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --e-global-color-primary: #F4EFEA;
+  --e-global-color-secondary: #161616;
+  --e-global-color-text: #F4EFEA99;
+  --e-global-color-accent: #FF7655;
+  --e-global-color-10f0bb9: #F4EFEA;
+  --e-global-color-f90294a: #FF7655;
+  --e-global-color-7eb3f77: #F4EFEA99;
+  --e-global-color-d597e6a: #F4EFEA1A;
+  --e-global-color-2731c26: #161616F0;
+  --e-global-color-6d2ce7d: #484A8C;
+  --e-global-color-7c0dadd: #30325D;
+  --e-global-color-183e2b3: #303030;
+  --e-global-color-742f86c: #161616;
+  --e-global-color-51ab0ab: #080808;
+  --e-global-color-cea1b5d: #00000000;
+  --e-global-color-a2fdaf4: #999999;
+  --e-global-color-7a747d4: #488C74;
+  --e-global-color-a1363cb: #7275DE;
+  --e-global-color-ded73d2: #F4EFEA33;
+  --e-global-color-94ab175: #30E3B4;
+  --e-global-color-38bf27c: #FFB355;
+  --e-global-color-81b495c: #222222;
+}
+
+
 .bg {
-  background-image: linear-gradient(#6a6a6a3f 1px, transparent 1px), linear-gradient(to right, #6a6a6a47 1px, rgba(4, 4, 6, 0.293) 1px);
+  background-image: linear-gradient(#6a6a6a3f 1px, transparent 2px), linear-gradient(to right, #6a6a6a47 1px, rgba(4, 4, 6, 0.293) 2px);
   /* background-image: linear-gradient(#00ac173f 1px, transparent 1px), linear-gradient(to right, #009c1547 1px, rgba(4, 4, 6, 0.293) 1px); */
   background-size: 30px 30px;
 }
@@ -35,7 +61,7 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-body::before,
+/* body::before,
 body::after {
   position: absolute;
   left:0;
@@ -43,14 +69,18 @@ body::after {
   content:'';
   width:100%;
   height:200%;
-  z-index: 9999;
+  z-index: 9;
 
   opacity: 30%;
+} */
+/* body::after {
+  filter:url(#grainy);
+} */
+
+.above {
+  z-index: 110;
 }
 
-body::after {
-  filter:url(#grainy);
-}
 
 @layer utilities {
   .text-balance {
@@ -59,13 +89,18 @@ body::after {
 }
 
 ::-webkit-scrollbar {
-  background-color: black;
+  background-color: rgb(38, 38, 38);
   width:10px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(69, 69, 69);
 }
 
 .grainy {
+  filter: url(#grainy);
+}
+
+.panel::after {
+  content:'';
   filter: url(#grainy);
 }

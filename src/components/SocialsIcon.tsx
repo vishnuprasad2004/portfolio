@@ -15,7 +15,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({name,icon: Icon, link}) => {
             href={link}
             title={name} 
             target="_blank"
-            className=" p-2 rounded-full hover:scale-125 duration-300">
+            className=" p-2 rounded-full lg:hover:scale-125 lg:duration-300">
                 <Icon/>
         </a>
     )

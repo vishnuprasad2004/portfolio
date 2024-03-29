@@ -1,9 +1,10 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
+import { FaHashnode } from "react-icons/fa6";
 
 const socials = [
   {
     name: "Instagram",
-    link: "/",
+    link: "https://instagram.com/the_vishnuprasadkorada",
     icon: BsInstagram,
   },
   {
@@ -18,9 +19,19 @@ const socials = [
   },
   {
     name: "Twitter",
-    link: "",
+    link: "https://twitter.com/the_vishnupk",
     icon: BsTwitterX,
   },
+  {
+    name: "Hashnode",
+    link: "https://vishnuprasadkorada.hashnode.dev/",
+    icon: FaHashnode
+  },
+  {
+    name: "Medium",
+    link: "",
+    icon: BsMedium
+  }
 ];
 
 export default socials
