@@ -31,11 +31,11 @@ const projects: project[] = [
     technologiesUsed: ["NextJs", "Typescript", "ReactJs"]
   },
   {
-    title: "Next Auth App",
+    title: "CLI Resume",
     description: "A Next app with user authentication using JWT",
     image: "./spaceInvader.png",
-    link: "https://github.com/vishnuprasad2004/next-auth-app",
-    technologiesUsed: ["NextJs", "Typescript", "ReactJs"]
+    link: "https://github.com/vishnuprasad2004/cli-resume",
+    technologiesUsed: ["Javascript", "NodeJs"]
   }
 ];
 

@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
+}
+
+@keyframes hue-change {
+  0% {filter:hue-rotate(0deg);}
+  25% {filter: hue-rotate(90deg);}
+  50% {filter: hue-rotate(180deg);}
+  75% {filter: hue-rotate(270deg);}
+  100% {filter: hue-rotate(360deg);}
+}
+
 :root {
   --e-global-color-primary: #F4EFEA;
   --e-global-color-secondary: #161616;
@@ -32,6 +52,15 @@
   background-image: linear-gradient(#6a6a6a3f 1px, transparent 2px), linear-gradient(to right, #6a6a6a47 1px, rgba(4, 4, 6, 0.293) 2px);
   /* background-image: linear-gradient(#00ac173f 1px, transparent 1px), linear-gradient(to right, #009c1547 1px, rgba(4, 4, 6, 0.293) 1px); */
   background-size: 30px 30px;
+}
+
+.bg-gradient-1 {
+  background-image: linear-gradient(#7275DE77,transparent);
+  animation: hue-change 10000ms linear 0ms infinite alternate both;
+  filter: saturate(20%) opacity(5%);
+}
+.bg-gradient-2 {
+  background-image: linear-gradient(transparent,#FFB35577,transparent);
 }
 
 .space-mono-regular {
@@ -103,4 +132,15 @@ body::after {
 .panel::after {
   content:'';
   filter: url(#grainy);
+}
+
+.wave-hand {
+  animation: wave-hand 100ms linear 10ms infinite normal;
+}
+
+.my-name {
+  /* filter: drop-shadow(0 0 100px 20px black); */
+  background: -webkit-linear-gradient(45deg,#eee, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
