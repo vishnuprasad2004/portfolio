@@ -142,5 +142,6 @@ body::after {
   /* filter: drop-shadow(0 0 100px 20px black); */
   background: -webkit-linear-gradient(45deg,#eee, #ccc);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
