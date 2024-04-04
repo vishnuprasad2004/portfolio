@@ -1,6 +1,6 @@
 "use client";
 
-import React, { MouseEventHandler, useEffect, useState } from "react";
+import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { Lacquer, Space_Mono, UnifrakturCook } from "next/font/google";
 import { DiCss3, DiHtml5, DiJava, DiJavascript1, DiMongodb, DiNodejs, DiNpm, DiPhotoshop, DiPython, DiReact } from "react-icons/di";
 import { SiCanva, SiInkscape, SiTypescript } from "react-icons/si";
@@ -22,12 +22,23 @@ interface CursorPosition {
 
 const Home = () => {
 
+  const [cursorSize, setCursorSize] = useState({ height:0, width:0 })
+  const [cursorPosition, setCursorPosition] = useState<CursorPosition>({ x: 0, y: 0 })
 
-  const [cursorPosition, setCursorPosition] = useState<CursorPosition>({ x: 0, y: 0 });
-
-  const [totalY, setTotalY] = useState(0); 
-  const [scrollBar, setScrollBar] = useState(0); 
+  const [totalY, setTotalY] = useState(0)
+  const [scrollBar, setScrollBar] = useState(0) 
+  const mouseRef = useRef<HTMLDivElement>(null)
   
+  const handleMouseMove = (e: MouseEvent) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+    mouseRef.current?.style.setProperty("top",`${cursorPosition.y}px`)
+    mouseRef.current?.style.setProperty("left",`${cursorPosition.x}px`)
+  }
+
+  const handleHover = () => {
+
+  }
+
   if(typeof window !== 'undefined') {
     const [y, setY] = useState(window.scrollY!)
 
@@ -41,20 +52,13 @@ const Home = () => {
   }
     // const scroll = `${((y + scrollBar) / totalY) * 100}%`;
 
+
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-    };
-
     document.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+    return () => { document.removeEventListener('mousemove', handleMouseMove) }
+  });
 
   
-
   return (
     <>
       <svg className="hidden">
@@ -65,7 +69,7 @@ const Home = () => {
           />
         </filter>
       </svg>
-      <div className="rounded-full bg-white bg-blend-difference absolute top-0 left-0" id="cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
+      <div className="hidden lg:block rounded-full bg-white mix-blend-difference absolute top-0 left-0 h-14 w-14 opacity-80" id="cursor" ref={mouseRef} style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
 
       {/* {if(typeof window !== 'undefined') }
       <div className="hidden lg:block fixed top-0 left-0 h-1 bg-yellow-500 z-30" style={{ }} id="bar"></div> */}
@@ -73,27 +77,15 @@ const Home = () => {
       <div className="h-1/2 w-screen absolute top-0 left-0 bg-gradient-1"></div>
       {/* <div className="rounded-full h-2/5 w-2/4 blur-2xl bg-gradient-2 absolute top-10 left-10"></div> */}
 
-
-      {/* panel section */}
+      {/* barcode wala image */}
       <img src="./barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 left-2 translate-y-1 select-none" draggable={"false"} />
-
 
       <main className="w-screen flex items-center flex-col scroll-smooth pb-14 overflow-x-hidden z-50">
         <SidePanel />
-
-        {/* hero section */}
-        <HeroSection/>
-
-        {/* About Me */}
+        <HeroSection setCursorSize={setCursorSize}/>
         <AboutSection/>
-
-        {/* Technologies I know */}
         <SkillsSection/>
-
-        {/* Projects I Made */}
         <ProjectsSection/>
-
-        
       </main>
     </>
   );
