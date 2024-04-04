@@ -1,14 +1,13 @@
 "use client";
 
-import React, { MouseEventHandler, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Lacquer, Space_Mono, UnifrakturCook } from "next/font/google";
-import { DiCss3, DiHtml5, DiJava, DiJavascript1, DiMongodb, DiNodejs, DiNpm, DiPhotoshop, DiPython, DiReact } from "react-icons/di";
-import { SiCanva, SiInkscape, SiTypescript } from "react-icons/si";
 import SidePanel from "@/components/SidePanel";
 import AboutSection from "@/components/layout/AboutSection";
 import ProjectsSection from "@/components/layout/ProjectsSection";
 import HeroSection from "@/components/layout/HeroSection";
 import SkillsSection from "@/components/layout/SkillsSection";
+import Image from "next/image";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
@@ -22,11 +21,11 @@ interface CursorPosition {
 
 const Home = () => {
 
-  const [cursorSize, setCursorSize] = useState({ height:0, width:0 })
+  // const [cursorSize, setCursorSize] = useState({ height:0, width:0 })
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({ x: 0, y: 0 })
 
-  const [totalY, setTotalY] = useState(0)
-  const [scrollBar, setScrollBar] = useState(0) 
+  // const [totalY, setTotalY] = useState(0)
+  // const [scrollBar, setScrollBar] = useState(0) 
   const mouseRef = useRef<HTMLDivElement>(null)
   
   const handleMouseMove = (e: MouseEvent) => {
@@ -35,21 +34,18 @@ const Home = () => {
     mouseRef.current?.style.setProperty("left",`${cursorPosition.x}px`)
   }
 
-  const handleHover = () => {
 
-  }
+  // if(typeof window !== 'undefined') {
+  //   const [y, setY] = useState(window.scrollY!)
 
-  if(typeof window !== 'undefined') {
-    const [y, setY] = useState(window.scrollY!)
-
-    useEffect(() => {
-      window.addEventListener("scroll", () => setY(window.scrollY));
-      const element = document.getElementsByTagName("body")[0];
-      setTotalY(element.clientHeight);
-      setScrollBar(window.innerHeight);
-    }, [y]);
+  //   useEffect(() => {
+  //     window.addEventListener("scroll", () => setY(window.scrollY));
+  //     const element = document.getElementsByTagName("body")[0];
+  //     setTotalY(element.clientHeight);
+  //     setScrollBar(window.innerHeight);
+  //   }, [y]);
   
-  }
+  // }
     // const scroll = `${((y + scrollBar) / totalY) * 100}%`;
 
 
@@ -78,7 +74,7 @@ const Home = () => {
       {/* <div className="rounded-full h-2/5 w-2/4 blur-2xl bg-gradient-2 absolute top-10 left-10"></div> */}
 
       {/* barcode wala image */}
-      <img src="./barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 left-2 translate-y-1 select-none" draggable={"false"} />
+      <Image src="/barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 w-fit left-2 translate-y-1 select-none" draggable={"false"} width={80} height={80}/>
 
       <main className="w-screen flex items-center flex-col scroll-smooth pb-14 overflow-x-hidden z-50">
         <SidePanel />

@@ -1,17 +1,18 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 interface ProjectCardProps {
     title:string;
     description:string;
-    image?: string,
+    image: string,
     link: string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, link}) => {
     return(
         <a href={link} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/4 m-2 lg:m-0 h-2/6">
-            <img src={image} alt="image about project" className="rounded-xl"/>
+            <Image src={image} alt="image about project" className="rounded-xl w-full h-full" width={500} height={500}/>
             <div className="p-3">
                 <b>{title}</b><br/>
                 <span>{description}</span>

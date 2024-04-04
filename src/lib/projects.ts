@@ -12,28 +12,28 @@ const projects: project[] = [
     title: "Space Invader Game",
     description:
       "The Classic Space Invader Game, You can play now ... made with game classes and canvasAPI animation rendering",
-    image: "./spaceInvader.png",
+    image: "/spaceInvader.png",
     link: "https://vishnuprasad2004.github.io/space-invader-game/",
     technologiesUsed: ["HTML", "CSS", "JavaScript - canvasAPI Animations"],
   },
   {
     title: "Student Manager API",
-    description: "yada",
-    image: "./spaceInvader.png",
+    description: "An API service to manage Students and their details, stored in MongoDB",
+    image: "/Stock Image.jpg",
     link: "https://github.com/vishnuprasad2004/StudentManagementAPI-TS",
-    technologiesUsed: ["NodeJs", "Typescript", "ExpressJs"],
+    technologiesUsed: ["NodeJs", "Typescript", "ExpressJs", "MongoDB"],
   },
   {
     title: "Next Auth App",
     description: "A Next app with user authentication using JWT",
-    image: "./spaceInvader.png",
+    image: "/nextjs image.jpeg",
     link: "https://github.com/vishnuprasad2004/next-auth-app",
     technologiesUsed: ["NextJs", "Typescript", "ReactJs"]
   },
   {
     title: "CLI Resume",
-    description: "A Next app with user authentication using JWT",
-    image: "./spaceInvader.png",
+    description: "A Command line application with showcases your resume, made using Nodejs",
+    image: "/CLIResumeScreenshot.png",
     link: "https://github.com/vishnuprasad2004/cli-resume",
     technologiesUsed: ["Javascript", "NodeJs"]
   }

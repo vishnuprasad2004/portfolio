@@ -1,3 +1,4 @@
+"use client";
 import { Lacquer, Space_Mono, UnifrakturCook } from "next/font/google";
 import { FC, useEffect, useState } from "react";
 
@@ -19,7 +20,7 @@ const HeroSection = () => {
         setCurrentFontIdx(prevIdx => (prevIdx + 1) % fontClassNames.length)
       },2000)
       return () => clearInterval(interval)
-    },[])
+    })
 
 
     return (
