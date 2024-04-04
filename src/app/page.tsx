@@ -82,7 +82,7 @@ const Home = () => {
 
       <main className="w-screen flex items-center flex-col scroll-smooth pb-14 overflow-x-hidden z-50">
         <SidePanel />
-        <HeroSection setCursorSize={setCursorSize}/>
+        <HeroSection />
         <AboutSection/>
         <SkillsSection/>
         <ProjectsSection/>
