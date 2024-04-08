@@ -8,6 +8,7 @@ import ProjectsSection from "@/components/layout/ProjectsSection";
 import HeroSection from "@/components/layout/HeroSection";
 import SkillsSection from "@/components/layout/SkillsSection";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
@@ -55,13 +56,16 @@ const Home = () => {
       {/* barcode wala image */}
       <Image src="/barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 w-fit left-2 translate-y-1 select-none" draggable={"false"} width={80} height={80}/>
 
-      <main className="w-screen flex items-center flex-col scroll-smooth pb-14 overflow-x-hidden z-50">
+      <main className="w-screen flex items-center flex-col scroll-smooth mb-32 overflow-x-hidden z-50 snap-mandatory snap-y">
         <SidePanel />
         <HeroSection />
         <AboutSection/>
         <SkillsSection/>
         <ProjectsSection/>
       </main>
+      <footer className={spaceMono.className + " text-rose-500 text-center pt-10 lg:pb-2 pb-16"}>
+          ❤️ Designed and Implemented by <i><Link href="https://github.com/vishnuprasad2004/portfolio">Vishnu Prasad Korada</Link></i>
+      </footer>
     </>
   );
 }

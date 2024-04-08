@@ -35,7 +35,7 @@ const socials = [
   // },
   {
     name: "HackerRank",
-    link: "",
+    link: "https://www.hackerrank.com/profile/vishnuprasadkor1",
     icon: SiHackerrank
   }
 ];

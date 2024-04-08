@@ -8,57 +8,95 @@ const unifrakturCook = UnifrakturCook({ weight: "700", subsets: ["latin"] })
 const lacquer = Lacquer({ weight: "400", subsets: ["latin"] })
 
 
-const HeroSection:FC = () => {
+const HeroSection: FC = () => {
 
-    // attempt to change the fonts every once in a few seconds
-    const fontClassNames = [spaceMono.className, unifrakturCook.className]
-    const [ currentFontIdx, setCurrentFontIdx ] = useState(0)
-    
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentFontIdx(prevIdx => (prevIdx + 1) % fontClassNames.length)
-      },2000)
-      return () => clearInterval(interval)
-    })
+  // attempt to change the fonts every once in a few seconds
+  const fontClassNames = [spaceMono.className, unifrakturCook.className]
+  const [currentFontIdx, setCurrentFontIdx] = useState(0)
 
-    // gsap animations
-    const nameRef = useRef<HTMLSpanElement>(null)
-    const handWaveRef = useRef<HTMLSpanElement>(null)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFontIdx(prevIdx => (prevIdx + 1) % fontClassNames.length)
+    }, 2000)
+    return () => clearInterval(interval)
+  })
 
-    useEffect(() => {
-      if (nameRef.current) {
-        gsap.to(nameRef.current, {
-          duration: 1,
-          scale: 1,
-          opacity: 1,
-          ease: "power1.inOut",
-        });
-      }
-    }, []);
+  // gsap animations
+  const nameRef = useRef<HTMLSpanElement>(null)
+  const handWaveRef = useRef<HTMLSpanElement>(null)
+  const subTitleRef = useRef<HTMLSpanElement>(null)
 
-    useEffect(()=> {
-      if (handWaveRef.current) {
-        const t1 = gsap.timeline({ repeat: -1 })
-        t1.to(handWaveRef.current, {
-          rotateX:"30", 
-          duration:2, 
-          ease:"power1"
-        })
-      }
-    },[])
+  const developerTextRef = useRef<HTMLDivElement>(null)
+  const designerTextRef = useRef<HTMLDivElement>(null)
 
-    return (
-        <div className="h-screen flex justify-center items-center" id="hero">
-          <div className="flex flex-col justify-center items-center w-screen">
+  useEffect(() => {
+    if (nameRef.current) {
+      gsap.to(nameRef.current, {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "power1.inOut",
+      });
+    }
 
-            <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <span className="wave-hand" ref={handWaveRef}>👋🏽</span>, I am</span>
-            <span className={spaceMono.className + " lg:text-8xl select-none text-3xl my-name brightness-150 scale-0 opacity-0"} ref={nameRef}>VishnuPrasadKorada™</span>
-            <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Developer & Designer</span>
+    if (subTitleRef.current) {
+      gsap.to(subTitleRef.current, {
+        duration: 3.5,
+        opacity: 1,
+        ease: "power1.inOut"
+      })
+    }
 
-            <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className="p-3 pt-1 pb-1 rounded-full m-3 border-2 border-solid border-neutral-600 border-opacity-80 bg-neutral-800 select-none">Download My Resume</a>
-          </div>
+    if(developerTextRef.current) {
+      gsap.to(developerTextRef.current, {
+        x:"",
+        opacity:0.8,
+        ease:"power1.inOut",
+        duration:1
+      })
+    }
+
+    if(designerTextRef.current) {
+      gsap.to(designerTextRef.current, {
+        x:"",
+        opacity:0.8,
+        ease:"power1.inOut",
+        duration:1
+      })
+    }
+
+  }, []);
+
+  useEffect(() => {
+    if (handWaveRef.current) {
+      const t1 = gsap.timeline({ repeat: -1 })
+      gsap.from(handWaveRef.current, {
+        rotate: 0
+      });
+      gsap.to(handWaveRef.current, {
+        rotate: 180
+      });
+    }
+  }, [])
+
+  return (
+    <>
+      {/* The low opacity accent texts that are only visible on mobile view */}
+      <div className={spaceMono.className + " absolute text-8xl font-bold select-none text-white/10 italic top-[30%] -left-52 rotate-90 lg:hidden opacity-0"} ref={developerTextRef}>Developer</div>
+      <div className={unifrakturCook.className + " absolute text-9xl font-bold select-none text-white/10 italic top-[60%] rotate-90 -right-48 lg:hidden opacity-0"} ref={designerTextRef}>Designer</div>
+      
+      <div className="h-screen flex justify-center items-center snap-start" id="hero">
+        <div className="flex flex-col justify-center items-center w-screen lg:hover:scale-110 duration-700">
+
+          <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <span className="wave-hand" ref={handWaveRef} style={{ transform: "rotate(180deg)" }}>👋🏽</span>, I am</span>
+          <span className={spaceMono.className + " lg:text-8xl select-none text-3xl my-name brightness-150 scale-0 opacity-0"} ref={nameRef}>VishnuPrasadKorada™</span>
+          <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef}>Developer & Designer</span>
+
+          <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className={spaceMono.className + " p-3 pt-1 pb-1 rounded-full m-3 border-2 border-solid border-[#7275DE] border-opacity-80 bg-[#7275DE]/20 select-none"}>Download My Resume</a>
         </div>
-    )
+      </div>
+    </>
+  )
 }
 
 export default HeroSection

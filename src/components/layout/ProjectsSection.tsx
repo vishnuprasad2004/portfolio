@@ -4,11 +4,12 @@ import projects from "@/lib/projects";
 import ProjectCard from "../ProjectCard";
 import { Space_Mono } from "next/font/google";
 import Heading from "../Heading";
+import React from "react";
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 
-const ProjectsSection = () => {
+const ProjectsSection: React.FC = () => {
     return (
-        <div className=" text-center lg:h-screen h-full w-screen p-5">
+        <div id="projects" className={spaceMono.className + " text-center h-full w-screen p-5 snap-start"}>
           <Heading text="Recent Projects"/>
           <div className="flex flex-grow pt-10 flex-col lg:flex-row justify-evenly flex-wrap p-3 gap-3">
             {projects.map((project,i) => {
@@ -19,6 +20,8 @@ const ProjectsSection = () => {
                   description={project.description}
                   image={project.image}
                   link={project.link}
+                  latest={project.latest}
+                  technologiesUsed={project.technologiesUsed}
                 />
               )
             })}

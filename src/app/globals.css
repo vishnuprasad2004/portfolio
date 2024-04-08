@@ -69,6 +69,15 @@
   font-style: normal;
 }
 
+.ring-around {
+  box-shadow: 0 0 0 2px black, 0 0 0 6px rgba(183, 43, 85, 0.525);
+  transition: 1000ms;
+}
+.ring-around:hover {
+  box-shadow: 0 0 0 2px black, 0 0 0 10px rgba(183, 43, 85, 1);
+  transition: 1000ms;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
