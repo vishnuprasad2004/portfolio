@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, lin
                     trigger: cardRef.current,
                     toggleActions: "reverse play restart play",
                     start: "top bottom",
-                    end: "top 40%",
+                    end: "top 60%",
                     scrub: true
                 }
             })
