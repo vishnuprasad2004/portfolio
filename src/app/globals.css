@@ -84,7 +84,9 @@
 }
 
 body {
-  cursor: none;
+  /* cursor: none; */
+  text-decoration: wavy;
+  text-decoration-color: #30E3B4;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -126,6 +128,16 @@ body::after {
   background-color: rgb(69, 69, 69);
 }
 
+::selection {
+  color:black;
+  background-color: crimson;
+}
+
+::-moz-selection {
+  color:black;
+  background-color: crimson;
+}
+
 .grainy {
   filter: url(#grainy);
 }
@@ -137,6 +149,11 @@ body::after {
 
 .wave-hand {
   animation: wave-hand 100ms linear 10ms infinite normal;
+}
+
+.wavy-underline {
+  text-decoration: wavy;
+  text-decoration-color: crimson;
 }
 
 .my-name {

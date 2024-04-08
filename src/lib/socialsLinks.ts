@@ -1,5 +1,6 @@
 import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { FaHashnode } from "react-icons/fa6";
+import { SiHackerrank } from "react-icons/si";
 
 const socials = [
   {
@@ -27,10 +28,15 @@ const socials = [
     link: "https://vishnuprasadkorada.hashnode.dev/",
     icon: FaHashnode
   },
+  // {
+  //   name: "Medium",
+  //   link: "",
+  //   icon: BsMedium
+  // },
   {
-    name: "Medium",
+    name: "HackerRank",
     link: "",
-    icon: BsMedium
+    icon: SiHackerrank
   }
 ];
 
