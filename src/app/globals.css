@@ -146,12 +146,12 @@ body::after {
 
 ::selection {
   color:black;
-  background-color: crimson;
+  background-color: rgba(197, 29, 62, 0.756);
 }
 
 ::-moz-selection {
   color:black;
-  background-color: crimson;
+  background-color: rgba(205, 29, 64, 0.729);
 }
 
 .grainy {
@@ -164,6 +164,7 @@ body::after {
 }
 
 .wave-hand {
+  position: relative;
   animation: wave-hand 1000ms linear 10ms infinite alternate;
 }
 

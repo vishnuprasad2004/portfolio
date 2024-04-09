@@ -9,6 +9,7 @@ import HeroSection from "@/components/layout/HeroSection";
 import SkillsSection from "@/components/layout/SkillsSection";
 import Image from "next/image";
 import Link from "next/link";
+import ContactSection from "@/components/layout/ContactSection";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
@@ -62,6 +63,7 @@ const Home = () => {
         <AboutSection/>
         <SkillsSection/>
         <ProjectsSection/>
+        {/* <ContactSection/> */}
       </main>
       <footer className={spaceMono.className + " text-rose-500 text-center pt-10 lg:pb-2 pb-16 backdrop-blur-sm"}>
           ❤️ Designed and Implemented by <i><Link href="https://github.com/vishnuprasad2004/portfolio">Vishnu Prasad Korada</Link></i>
