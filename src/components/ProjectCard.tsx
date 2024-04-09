@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, lin
 
 
     return(
-        <a href={link} ref={cardRef} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/4 w-10/12 lg:m-0 h-2/6 text-left opacity-0 scale-0">
+        <a href={link} ref={cardRef} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/4 w-[90%] lg:m-0 h-2/6 text-left opacity-0 scale-0">
             <Image src={image} alt="image about project" className="rounded-xl w-full h-[200px]" width={500} height={500}/>
             <div className="p-3">
                 <div className="flex justify-between items-center">
