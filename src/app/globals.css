@@ -5,12 +5,15 @@
 @keyframes wave-hand {
   0% {
     transform: rotate(0deg);
+    transform-origin: bottom right;
   }
   50% {
-    transform: rotate(-100deg);
+    transform: rotate(-10deg);
+    transform-origin: bottom right;
   }
   100% {
-    transform: rotate(100deg);
+    transform: rotate(20deg);
+    transform-origin: bottom right;
   }
 }
 
@@ -61,6 +64,10 @@
 }
 .bg-gradient-2 {
   background-image: linear-gradient(transparent,#FFB35577,transparent);
+}
+
+.download-btn {
+  animation: hue-change 10000ms linear 0ms infinite alternate both;
 }
 
 .space-mono-regular {
@@ -157,7 +164,7 @@ body::after {
 }
 
 .wave-hand {
-  animation: wave-hand 100ms linear 10ms infinite normal;
+  animation: wave-hand 1000ms linear 10ms infinite alternate;
 }
 
 .wavy-underline {

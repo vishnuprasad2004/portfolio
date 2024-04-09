@@ -5,13 +5,24 @@ import Image from "next/image";
 import Heading from "../Heading";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 const alegreya = Alegreya({ weight:"400", subsets: ["latin"] })
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutSection = () => {
+interface SpecialTextProps {
+  text:string;
+}
+
+const Special:FC<SpecialTextProps> = ({ text }) => {
+  return (
+    <i className="text-rose-400 bg-rose-400/10 lg:hover:bg-rose-800/100 lg:hover:text-white duration-150 lg:hover:brightness-150">{text}</i>
+  )
+}
+
+
+const AboutSection:FC = () => {
 
   const animationRef = useRef<HTMLDivElement>(null)
 
@@ -36,20 +47,20 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="lg:h-screen h-full w-screen flex flex-col text-center items-center justify-center snap-start" id="about">
+    <div className="lg:h-screen h-[120%] w-screen flex flex-col text-center items-center justify-center snap-start" id="about">
 
       <Heading text="About Me" />
 
       <div className={spaceMono.className + " flex gap-3 lg:flex-row flex-col text-left items-center justify-evenly lg:pl-40 lg:pr-40 pl-9 pr-7 text-wrap opacity-0 scale-0 pb-10"} ref={animationRef}>
-        <Image src="/Vishnu Prasad Korada DP.jpg" alt="my dp" className="rounded-full lg:w-72 m-2 w-1/2 select-none ring-around" width={288} height={288} />
+        <Image src="/Vishnu Prasad Korada DP.jpg" alt="my dp" className="rounded-full lg:w-72 m-2 w-2/3 select-none ring-around" width={288} height={288} />
 
         <p>
           Hello 👋, I am <i className="text-rose-400 font-semibold decoration-rose-300 wavy-underline">Vishnu Prasad Korada</i>,<br />
-          As a Computer Science sophomore with a passion for AI/ML, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <i className="text-rose-400 bg-rose-300/10">Full Stack Development and Machine Learning Algorithms.</i>🧑🏽‍💻
+          As a Computer Science sophomore with a passion for AI/ML, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development and Machine Learning Algorithms."/>🧑🏽‍💻
           <br />
-          Beyond Programming, I also immerse myself in the world of <i className="text-rose-400 bg-rose-400/10">design</i> often as a creative outlet.🎨 I think there is more to design than aesthetics and I am constantly boosting my creative output by applying it in competitions, projects, and practical university scenarios.
+          Beyond Programming, I also immerse myself in the world of <Special text="Graphic Designing "/> often as a creative outlet.🎨 I think there is more to design than aesthetics and I am constantly boosting my creative output by applying it in competitions, projects, and practical university scenarios.
           <br />
-          Beyond the digital realm, my fascination with geopolitics, space exploration and scientific research drives me to stay informed about the latest advancements.
+          {/* Beyond the digital realm, my fascination with geopolitics, space exploration and scientific research drives me to stay informed about the latest advancements. */}
           <br />
           <b>Let&apos;s connect and explore the limitless possibilities of Development and Design ... 😊✨✨</b>
         </p>

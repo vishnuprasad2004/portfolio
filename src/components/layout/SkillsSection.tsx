@@ -11,7 +11,7 @@ const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 
 const SkillsSection = () => {
     return (
-        <div id="skills" className={spaceMono.className + " lg:text-3xl text-xl text-center lg:h-screen h-[110%] w-screen flex flex-col justify-center items-center snap-start"}>
+        <div id="skills" className={spaceMono.className + " lg:text-3xl text-xl text-center lg:h-screen h-screen mb-10 w-screen flex flex-col justify-center items-center lg:pl-44 lg:pr-44"}>
           <Heading text="My Skills"/>
           <div className="flex flex-wrap gap-2 p-5 text-5xl justify-center items-center">
 

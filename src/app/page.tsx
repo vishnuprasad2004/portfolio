@@ -54,7 +54,7 @@ const Home = () => {
       {/* <div className="rounded-full h-2/5 w-2/4 blur-2xl bg-gradient-2 absolute top-10 left-10"></div> */}
 
       {/* barcode wala image */}
-      <Image src="/barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 w-fit left-2 translate-y-1 select-none" draggable={"false"} width={80} height={80}/>
+      <Image src="/barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 w-fit left-2 translate-y-1 select-none z-50" draggable={"false"} width={80} height={80}/>
 
       <main className="w-screen flex items-center flex-col scroll-smooth mb-40 overflow-x-hidden z-50 snap-mandatory snap-y">
         <SidePanel />

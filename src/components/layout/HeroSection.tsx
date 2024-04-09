@@ -23,7 +23,7 @@ const HeroSection: FC = () => {
 
   // gsap animations
   const nameRef = useRef<HTMLSpanElement>(null)
-  const handWaveRef = useRef<HTMLSpanElement>(null)
+  const handWaveRef = useRef<HTMLDivElement>(null)
   const subTitleRef = useRef<HTMLSpanElement>(null)
 
   const developerTextRef = useRef<HTMLDivElement>(null)
@@ -67,17 +67,16 @@ const HeroSection: FC = () => {
 
   }, []);
 
-  useEffect(() => {
-    if (handWaveRef.current) {
-      const t1 = gsap.timeline({ repeat: -1 })
-      gsap.from(handWaveRef.current, {
-        rotate: 0
-      });
-      gsap.to(handWaveRef.current, {
-        rotate: 180
-      });
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (handWaveRef.current) {
+  //     gsap.to(handWaveRef.current, {
+  //       repeat:0,
+  //       duration:5,
+  //       ease:"back.inOut",
+  //       rotation:360
+  //     })
+  //   }
+  // }, [])
 
   return (
     <>
@@ -88,11 +87,11 @@ const HeroSection: FC = () => {
       <div className="h-screen flex justify-center items-center snap-start" id="hero">
         <div className="flex flex-col justify-center items-center w-screen lg:hover:scale-110 duration-700">
 
-          <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <span className="wave-hand" ref={handWaveRef} style={{ transform: "rotate(180deg)" }}>👋🏽</span>, I am</span>
+          <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <div className="wave-hand inline-block" ref={handWaveRef}>👋🏼</div>, I am</span>
           <span className={spaceMono.className + " lg:text-8xl select-none text-3xl my-name brightness-150 scale-0 opacity-0"} ref={nameRef}>VishnuPrasadKorada™</span>
           <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef}>Developer & Designer</span>
 
-          <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className={spaceMono.className + " p-3 pt-1 pb-1 rounded-full m-3 border-2 border-solid border-[#7275DE] border-opacity-80 bg-[#7275DE]/20 select-none"}>Download My Resume</a>
+          <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className={spaceMono.className + " p-3 pt-1 pb-1 rounded-full m-3 border-2 border-solid border-[#7275DE] border-opacity-80 bg-[#7275DE]/20 select-none  duration-1000"}>Download My Resume</a>
         </div>
       </div>
     </>
