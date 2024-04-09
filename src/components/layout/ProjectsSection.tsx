@@ -9,9 +9,9 @@ const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 
 const ProjectsSection: React.FC = () => {
     return (
-        <div id="projects" className={spaceMono.className + " text-center h-full w-screen p-5 snap-start"}>
+        <div id="projects" className={spaceMono.className + " text-center h-full w-screen p-5"}>
           <Heading text="Recent Projects"/>
-          <div className="flex flex-grow pt-10 flex-col lg:flex-row justify-evenly flex-wrap p-3 gap-3">
+          <div className="flex flex-grow pt-10 flex-col lg:flex-row justify-evenly flex-wrap gap-4 items-center">
             {projects.map((project,i) => {
               return (
                 <ProjectCard

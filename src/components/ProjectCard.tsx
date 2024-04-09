@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, lin
 
 
     return(
-        <a href={link} ref={cardRef} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/4 m-2 lg:m-0 h-2/6 text-left opacity-0 scale-0">
+        <a href={link} ref={cardRef} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/4 w-5/6 lg:m-0 h-2/6 text-left opacity-0 scale-0">
             <Image src={image} alt="image about project" className="rounded-xl w-full h-[200px]" width={500} height={500}/>
             <div className="p-3">
                 <div className="flex justify-between items-center">
@@ -52,8 +52,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, lin
                     )
                 })}
                 <br />
-                <span className="italic text-xs text-neutral-600 text-left m-0 p-0">*click to go to the project repo or deployed link</span>
             </div>
+                <span className="italic text-xs text-neutral-600 text-left m-0 p-0">*click to go to the project repo or deployed link</span>
         </a>
     )
 }

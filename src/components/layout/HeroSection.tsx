@@ -41,7 +41,7 @@ const HeroSection: FC = () => {
 
     if (subTitleRef.current) {
       gsap.to(subTitleRef.current, {
-        duration: 3.5,
+        duration: 1.5,
         opacity: 1,
         ease: "power1.inOut"
       })

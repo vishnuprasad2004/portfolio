@@ -56,7 +56,7 @@ const Home = () => {
       {/* barcode wala image */}
       <Image src="/barcode1.png" alt="assest" className="fixed lg:bottom-3 lg:left-3 lg:h-20 h-14 w-fit left-2 translate-y-1 select-none" draggable={"false"} width={80} height={80}/>
 
-      <main className="w-screen flex items-center flex-col scroll-smooth mb-32 overflow-x-hidden z-50 snap-mandatory snap-y">
+      <main className="w-screen flex items-center flex-col scroll-smooth mb-40 overflow-x-hidden z-50 snap-mandatory snap-y">
         <SidePanel />
         <HeroSection />
         <AboutSection/>
