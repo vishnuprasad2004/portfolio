@@ -11,7 +11,7 @@ type project = {
 const projects: project[] = [
   {
     title: "Next Auth App",
-    description: "A Next app with user authentication using JWT",
+    description: "A Nextjs application with user authentication using Json Web Tokens",
     image: "/nextjs image.jpeg",
     link: "https://github.com/vishnuprasad2004/next-auth-app",
     technologiesUsed: ["NextJs", "Typescript", "ReactJs","MongoDB","JWT"],
@@ -19,7 +19,7 @@ const projects: project[] = [
   },
   {
     title: "Student Manager API",
-    description: "An API service to manage Students and their details, stored in MongoDB",
+    description: "An API service to manage Students and their details based on their Roll number as the primary key, stored in MongoDB",
     image: "/Stock Image.jpg",
     link: "https://github.com/vishnuprasad2004/StudentManagementAPI-TS",
     technologiesUsed: ["NodeJs", "Typescript", "ExpressJs", "MongoDB"],
@@ -36,10 +36,10 @@ const projects: project[] = [
   },
   {
     title: "CLI Resume",
-    description: "A Command line application with showcases your resume, made using Nodejs",
+    description: "A Command line application which showcases your resume, made using Nodejs",
     image: "/CLIResumeScreenshot.png",
     link: "https://github.com/vishnuprasad2004/cli-resume",
-    technologiesUsed: ["Javascript", "NodeJs"],
+    technologiesUsed: ["Javascript", "NodeJs","npm"],
     latest: false
   }
 ];

@@ -46,11 +46,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, lin
                 </div>
                 <span className="text-sm text-neutral-300">{description}</span>
                 <br />
-                {technologiesUsed.map(technology => {
-                    return(
-                        <span key={technology} className="text-xs pl-1 pr-1 m-1 rounded-full bg-[#7275DE]/15 text-[#7275DE]">{technology}</span>
-                    )
-                })}
+                <div className="flex flex-wrap">
+                    {technologiesUsed.map(technology => {
+                        return(
+                            <span key={technology} className="text-xs pl-1 pr-1 m-1 rounded-full bg-[#7275DE]/15 text-[#7275DE]">{technology}</span>
+                        )
+                    })}
+                </div>
                 <br />
             </div>
                 <span className="italic text-xs text-neutral-600 text-left m-0 p-0">*click to go to the project repo or deployed link</span>

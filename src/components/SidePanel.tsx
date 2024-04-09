@@ -15,13 +15,14 @@ const SidePanel = () => {
   const closeDialogModel = () => {
     if (dialogRef.current && dialogRef.current.open) {
       dialogRef.current.close()
-      dialogRef.current.style.setProperty("display", "none")
+      dialogRef.current.style.setProperty("transform", "scale(0)")
     }
   }
   const openDialogModel = () => {
     if (dialogRef.current && !dialogRef.current.open) {
       dialogRef.current.showModal()
       dialogRef.current.style.setProperty("display", "flex")
+      dialogRef.current.style.setProperty("transform", "scale(1)")
     }
   }
 
@@ -49,7 +50,7 @@ const SidePanel = () => {
           <span className="text-3xl font-bold text-[#55dfaf]">Menu</span>
           <span className="font-bold text-sm select-none" onClick={() => { closeDialogModel() }}>✕</span>
         </div>
-        <div className="flex flex-col gap-1 text-3xl">
+        <div className="flex flex-col gap-1 text-3xl duration-100">
           <Link href="#home" onClick={() => { closeDialogModel() }}># Home</Link>
           <Link href="#about" onClick={() => { closeDialogModel() }}># About</Link>
           <Link href="#skills" onClick={() => { closeDialogModel() }}># Skills</Link>
