@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, lin
                 <div className="flex flex-wrap">
                     {technologiesUsed.map(technology => {
                         return(
-                            <span key={technology} className="text-xs pl-1 pr-1 m-1 rounded-full bg-[#7275DE]/15 text-[#7275DE]">{technology}</span>
+                            <span key={technology} className="text-xs p-1 pl-2 pr-2 m-1 rounded-full bg-[#7275DE]/15 text-[#7275DE] font-semibold">{technology}</span>
                         )
                     })}
                 </div>
