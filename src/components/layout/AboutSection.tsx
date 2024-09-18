@@ -40,8 +40,9 @@ const AboutSection:FC = () => {
     gsap.from(text.words,{
       scrollTrigger: {
         trigger:text.words,
-        start:"top 80%",
-        end:"top 20%",
+        start:"top 100%",
+        end:"top 35%",
+        markers: true,
         scrub:true
       }, 
       stagger:0.1,
@@ -93,7 +94,7 @@ const AboutSection:FC = () => {
 
         <p id="content">
           Hello 👋, I am <i className="text-rose-400 font-semibold decoration-rose-300 wavy-underline">Vishnu Prasad Korada</i>,<br />
-          As a Computer Science sophomore with a passion for AI/ML, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development and Machine Learning Algorithms."/>🧑🏽‍💻
+          As a Computer Science pre-final student with a passion for Software Development AI/ML, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development and Machine Learning Algorithms."/>🧑🏽‍💻
           <br />
           Beyond Programming, I also immerse myself in the world of <Special text="Graphic Designing "/> often as a creative outlet.🎨 I think there is more to design than aesthetics and I am constantly boosting my creative output by applying it in competitions, projects, and practical university scenarios.
           <br />

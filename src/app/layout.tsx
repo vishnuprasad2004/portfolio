@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-vishnu-prasad-korada.vercel.app"),
   title: "Vishnu Prasad Korada | Portfolio",
   description: "Portfolio for a developer cum designer, generated through typing and love",
-  keywords: ["portfolio", "nextjs", "developer", "student", "designer"],
+  keywords: ["portfolio", "nextjs", "developer", "student", "designer", "Vishnu Prasad Korada"],
   openGraph: {
     title:"Vishnu Prasad Korada | Portfolio",
     type: "website",
-    url:"portfolio-vishnu-prasad-korada.vercel.app",
+    url:"vishnu-prasad-korada.vercel.app",
     siteName:"Vishnu Prasad Korada | Portfolio",
     images: [{
       url: "/Vishnu Prasad Korada DP.jpg"
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card:"summary_large_image",
     title:"Vishnu Prasad Korada | Portfolio",
     description:"Portfolio for a developer cum designer, generated through typing and love",
-    site:"portfolio-vishnu-prasad-korada.vercel.app",
+    site:"vishnu-prasad-korada.vercel.app",
     images:"/Vishnu Prasad Korada DP.jpg"
   }
 };
