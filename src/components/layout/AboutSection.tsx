@@ -42,7 +42,7 @@ const AboutSection:FC = () => {
         trigger:text.words,
         start:"top 100%",
         end:"top 35%",
-        markers: true,
+        // markers: true,
         scrub:true
       }, 
       stagger:0.1,
