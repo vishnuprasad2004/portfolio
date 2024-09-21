@@ -15,15 +15,15 @@ const projects: project[] = [
     image: "/nextjs image.jpeg",
     link: "https://github.com/vishnuprasad2004/next-auth-app",
     technologiesUsed: ["NextJs", "Typescript", "ReactJs","MongoDB","JWT"],
-    latest: true
+    latest: false
   },
   {
-    title: "Student Manager API",
-    description: "An API service to manage Students and their details based on their Roll number as the primary key, stored in MongoDB",
+    title: "Student Management API",
+    description: "An RESTful API service to manage Students, Departments, Instructors and Courses using CRUD operations and MongoDB Aggregation operations",
     image: "/Stock Image.jpg",
     link: "https://github.com/vishnuprasad2004/StudentManagementAPI-TS",
     technologiesUsed: ["NodeJs", "Typescript", "ExpressJs", "MongoDB"],
-    latest: false
+    latest: true
   },
   {
     title: "Space Invader Game",
