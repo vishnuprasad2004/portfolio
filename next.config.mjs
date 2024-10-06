@@ -13,6 +13,12 @@ const nextConfig = {
                 hostname:"img.shields.io",
                 port:"",
                 pathname:"/badge/**"
+            },
+            {
+                protocol: "https",
+                hostname:"github.com",
+                port:"",
+                pathname:"/user-attachments/assets/**"
             }
         ]
     }
