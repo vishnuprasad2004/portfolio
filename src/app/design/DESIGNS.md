@@ -36,3 +36,6 @@
 ![Treasure Hunt Competition-1](https://github.com/user-attachments/assets/bc7a2c98-ecda-423a-a874-ae7bab3e14c0)
 ![WhatsApp Image 2024-10-05 at 12 56 57 AM](https://github.com/user-attachments/assets/de692425-d88f-4b27-a30b-734c83acc7cc)
 ![WhatsApp Image 2024-10-07 at 8 21 54 AM](https://github.com/user-attachments/assets/24b3beea-da2b-492f-824d-8a09479cb364)
+![ART GALLERY](https://github.com/user-attachments/assets/fa565ef5-34ca-46c7-a205-483559384da2)
+![happy Holi](https://github.com/user-attachments/assets/6bb5690c-00c0-47d5-8037-9cc51c705352)
+![Rangoli Competition Avyakt 3.0](https://github.com/user-attachments/assets/2b5f6d8a-3661-4976-8e5d-f5e9917cbcd2)
