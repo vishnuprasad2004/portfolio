@@ -4,20 +4,21 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaGithub } from "react-icons/fa6";
+import { IconType } from "react-icons";
 gsap.registerPlugin(ScrollTrigger)
 
-interface ProjectCardProps {
+interface BlogCardProps {
     title:string;
     description:string;
     image: string,
-    sourceLink: string,
-    deploymentLink?: string,
+    link: string,
     latest: boolean,
-    technologiesUsed:string[]
+    domains: string[],
+    platforms: IconType,
 }
 
 
-const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sourceLink, latest, technologiesUsed}) => {
+const BlogCard: React.FC<BlogCardProps> = ({title, description, image, link, latest, domains, platforms}) => {
     
     const cardRef = React.useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -49,19 +50,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
                 <span className="text-sm text-neutral-300">{description}</span>
                 <br />
                 <div className="flex flex-wrap mt-1 gap-2">
-                    {technologiesUsed.map(technology => {
+                    {domains.map(domain => {
                         return(
-                            <span key={technology} className="text-xs p-1 px-2 rounded-full bg-[#7275DE]/15 text-[#7275DE] font-semibold">{technology}</span>
+                            <span key={domain} className="text-xs p-1 px-2 rounded-full bg-[#7275DE]/15 text-[#7275DE] font-semibold">{domain}</span>
                         )
                     })}
                 </div>
                 <br />
                 <div>
-                    <a href={sourceLink} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
+                    <a href={link} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
                         <FaGithub className="text-base"/>
-                        <span>Source Code</span>
+                        <span>Blog Link</span>
                     </a>
-                    { <a href=""></a>}
                 </div>
             </div>
         </div>
@@ -69,4 +69,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
 }
 
 
-export default ProjectCard
+export default BlogCard

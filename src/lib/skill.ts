@@ -12,12 +12,13 @@ const skills: String[] = [
     "HTML5",
     "CSS3",
     "Typescript",
-    "Tailwindcss",
-    "Next",
-    "React",
+    "Tailwind CSS",
+    "Next.JS",
+    "React.JS",
     "Vercel",
     "Flask",
-    
+    "Postman",
+    "React Native Expo"
 ]
 
 

@@ -19,7 +19,8 @@ const ProjectsSection: React.FC = () => {
                   title={project.title}
                   description={project.description}
                   image={project.image}
-                  link={project.link}
+                  sourceLink={project.sourceLink}
+                  deploymentLink={project.deploymentLink || ""}
                   latest={project.latest}
                   technologiesUsed={project.technologiesUsed}
                 />
