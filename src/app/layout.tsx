@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     description:"Portfolio for a developer cum designer, generated through typing and love",
     site:"vishnu-prasad-korada.vercel.app",
     images:"/Vishnu Prasad Korada DP.jpg"
+  },
+  verification:{
+    google: "Hs6JVVes_9Zh2mwbaAx7bKKDAB5bqNnyx7fhU5KvZ7E"
   }
 };
 

@@ -69,7 +69,7 @@ const Home = () => {
         </filter>
       </svg>
       {/* <div className="hidden lg:block rounded-full bg-white mix-blend-difference absolute top-0 left-0 h-[56px] w-[56px] opacity-80" id="cursor" ref={mouseRef} style={{ left: cursorPosition.x, top: cursorPosition.y }}></div> */}
-      <Image id="duck" src="/duck-ducky.gif" className="fixed -bottom-5 -left-20 lg:-bottom-20 z-30 scale-[30%] lg:scale-[40%] select-none" width={200} height={100} alt="meow"/>
+      <Image id="duck" unoptimized src="/duck-ducky.gif" className="fixed -bottom-5 -left-20 lg:-bottom-20 z-30 scale-[30%] lg:scale-[40%] select-none" width={200} height={100} alt="meow"/>
       <div className="h-1/2 w-screen absolute top-0 left-0 bg-gradient-1"></div>
       {/* <div className="rounded-full h-2/5 w-2/4 blur-2xl bg-gradient-2 absolute top-10 left-10"></div> */}
 
