@@ -25,14 +25,9 @@ const Special:FC<SpecialTextProps> = ({ text }) => {
 
 const AboutSection:FC = () => {
 
-  const [imageSrc, setImageSrc] = useState('');
-  let [currentIndex,setCurrentIndex] = useState(0);
-  let currentIdxRef = useRef(0);
   const animationRef = useRef<HTMLDivElement>(null)
   const displayPictureRef = useRef<HTMLImageElement>(null)
 
-  const imageSources = ["/Vishnu Prasad Korada DP.jpg", "/Vishnu Prasad Korada DP 2.jpg"];
-  
   useEffect(() => {
     const text = new SplitType("#content", { types:"chars,words" })
     console.log(text);
@@ -76,13 +71,6 @@ const AboutSection:FC = () => {
     // },1000)
   }, []);
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setImageSrc(imageSources[currentIdxRef.current]);
-  //     currentIdxRef.current = (currentIdxRef.current + 1) % imageSources.length; 
-  //     return () => clearInterval(intervalId);
-  //   }, 5000);
-  // }, []);
 
   return (
     <div className="lg:h-screen h-[120%] w-screen flex flex-col text-center items-center justify-center snap-start" id="about">

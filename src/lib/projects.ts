@@ -11,10 +11,18 @@ type project = {
 
 const projects: project[] = [
   {
+    title: "Finage",
+    description: "A Nextjs application with user authentication using Json Web Tokens",
+    image: "https://github.com/user-attachments/assets/15e0d496-14a3-42ed-9722-d5f540bfb73c",
+    sourceLink: "https://github.com/vishnuprasad2004/finage",
+    technologiesUsed: ["React Native", "Typescript", "Supabase", "Expo"],
+    latest: true
+  },
+  {
     title: "Next Auth App",
     description: "A Nextjs application with user authentication using Json Web Tokens",
     image: "/nextjs image.jpeg",
-    sourceLink: "https://github.com/vishnuprasad2004/next-auth-app",
+    sourceLink: "https://github.com/vishnuprasad2004/",
     technologiesUsed: ["NextJs", "Typescript", "ReactJs","MongoDB","JWT"],
     latest: false
   },
@@ -24,7 +32,7 @@ const projects: project[] = [
     image: "/Stock Image.jpg",
     sourceLink: "https://github.com/vishnuprasad2004/StudentManagementAPI-TS",
     technologiesUsed: ["NodeJs", "Typescript", "ExpressJs", "MongoDB", "Jest"],
-    latest: true
+    latest: false
   },
   {
     title: "Space Invader Game",

@@ -15,14 +15,14 @@ const SidePanel = () => {
   const closeDialogModel = () => {
     if (dialogRef.current && dialogRef.current.open) {
       dialogRef.current.close()
-      dialogRef.current.style.setProperty("transform", "scale(0)")
+      dialogRef.current.style.setProperty("opacity", "0")
     }
   }
   const openDialogModel = () => {
     if (dialogRef.current && !dialogRef.current.open) {
       dialogRef.current.showModal()
       dialogRef.current.style.setProperty("display", "flex")
-      dialogRef.current.style.setProperty("transform", "scale(1)")
+      dialogRef.current.style.setProperty("opacity", "1")
     }
   }
 
