@@ -2,8 +2,7 @@ const skills: String[] = [
     "JavaScript",
     "Node.js",
     "Express.js",
-    "Inkscape",
-    "Canva",
+    "Typescript",
     "Java",
     "C",
     "MongoDB",
@@ -11,14 +10,16 @@ const skills: String[] = [
     "Python",
     "HTML5",
     "CSS3",
-    "Typescript",
     "Tailwind CSS",
     "Next.JS",
     "React.JS",
     "Vercel",
     "Flask",
     "Postman",
-    "React Native Expo"
+    "React Native Expo",
+    "Redux-Toolkit",
+    "Canva",
+    "Inkscape",
 ]
 
 
