@@ -11,6 +11,14 @@ type project = {
 
 const projects: project[] = [
   {
+    title:"Momentum",
+    description: "Momentum is a task management app that goes beyond traditional to-do lists. Unlike standard apps where tasks get forgotten after the deadline, Momentum ensures you stay on track with AI-generated reminders inspired by Duolingo’s notification system.",
+    image:"https://github.com/user-attachments/assets/9e1a2cf3-492f-43ce-b5ba-0a597ea76408",
+    latest: true,
+    sourceLink:"https://github.com/vishnuprasad2004/momentum",
+    technologiesUsed:["React Native Expo", "Supabase", "React.js", "Typescript", "Redux-Toolkit"]
+  },
+  {
     title: "Finage",
     description: "A Nextjs application with user authentication using Json Web Tokens",
     image: "https://github.com/user-attachments/assets/15e0d496-14a3-42ed-9722-d5f540bfb73c",
