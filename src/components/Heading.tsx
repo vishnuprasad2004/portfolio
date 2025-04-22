@@ -9,7 +9,7 @@ interface HeadingProps {
 
 const Heading:React.FC<HeadingProps> = ({ text }) => {
     return (
-        <p className={spaceMono.className + " text-5xl mb-4 text-rose-500"}>{text}</p>
+        <div className={spaceMono.className + " lg:text-6xl text-5xl mb-4 shiny-text"}>{text}</div>
     )
 }
 

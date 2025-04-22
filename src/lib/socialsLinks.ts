@@ -4,11 +4,6 @@ import { SiHackerrank } from "react-icons/si";
 
 const socials = [
   {
-    name: "Instagram",
-    link: "https://instagram.com/the_vishnuprasadkorada",
-    icon: BsInstagram,
-  },
-  {
     name: "LinkedIn",
     link: "https://linkedin.com/in/vishnu-prasad-korada/",
     icon: BsLinkedin,
@@ -27,6 +22,11 @@ const socials = [
     name: "Hashnode",
     link: "https://vishnuprasadkorada.hashnode.dev/",
     icon: FaHashnode
+  },
+  {
+    name: "Instagram",
+    link: "https://instagram.com/the_vishnuprasadkorada",
+    icon: BsInstagram,
   },
   // {
   //   name: "Medium",

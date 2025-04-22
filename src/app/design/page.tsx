@@ -1,12 +1,13 @@
 "use client";
 import SidePanel from "@/components/SidePanel";
 import { Space_Grotesk, Fraunces } from "next/font/google";
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import gsap from "gsap";
 import Image from "next/image";
 import designs from "@/lib/designs";
+import Loader from "@/components/Loader";
 gsap.registerPlugin(ScrollTrigger);
 
 interface DesignPosterProp {
@@ -28,9 +29,11 @@ const fraunces = Fraunces({weight: "variable", subsets: ["latin"], style:"italic
 
 const DesignPage = () => {
     const headingText = useRef(null);
-
-    useEffect(() => {
-        gsap.fromTo(
+      const [loading, setLoading] = useState(true)
+    
+      
+      useEffect(() => {
+          gsap.fromTo(
             headingText.current!,
             { scale: 0.2, opacity: 1 },
             {
@@ -47,6 +50,18 @@ const DesignPage = () => {
             }
         );
     })
+
+    useEffect(() => {
+    const timeout = setTimeout(() => {
+        setLoading(false)
+    }, 2000) // 2 seconds
+
+    return () => clearTimeout(timeout)
+    }, [])
+
+    if (loading) return <Loader />
+
+    
     return(
         <>
             <div className="px-4">

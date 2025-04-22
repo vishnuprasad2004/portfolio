@@ -52,7 +52,8 @@
 
 
 .bg {
-  background-image: linear-gradient(#6a6a6a3f 1px, transparent 2px), linear-gradient(to right, #6a6a6a47 1px, rgba(4, 4, 6, 0.293) 2px);
+  /* background-image: linear-gradient(#6a6a6a3f 1px, transparent 2px), linear-gradient(to right, #6a6a6a47 1px, rgba(4, 4, 6, 0.293) 2px); */
+  background-image: linear-gradient(#6a6a6a3f 1px, transparent 2px), linear-gradient(to right, #6a6a6a47 1px, rgba(4, 4, 6, 0.293) 2px),linear-gradient(#111111, #111111);
   /* background-image: linear-gradient(#00ac173f 1px, transparent 1px), linear-gradient(to right, #009c1547 1px, rgba(4, 4, 6, 0.293) 1px); */
   background-size: 30px 30px;
 }
@@ -104,9 +105,9 @@ body {
   text-decoration: wavy;
   text-decoration-color: #30E3B4;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
 }
 
 /* body::before,
@@ -204,4 +205,22 @@ body::after {
   width: 100%;
   height: 100%;
   
+}
+
+.shiny-text {
+  background: linear-gradient(45deg, #F43F5E, #f04965, #af2d42, #F43F5E, #f86c83 200px, #F43F5E 220px);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 20s linear infinite alternate;
+  background-clip: text;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }

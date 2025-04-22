@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaGithub } from "react-icons/fa6";
+import { FaHashnode } from "react-icons/fa6";
 import { IconType } from "react-icons";
 gsap.registerPlugin(ScrollTrigger)
 
@@ -59,7 +59,7 @@ const BlogCard: React.FC<BlogCardProps> = ({title, description, image, link, lat
                 <br />
                 <div>
                     <a href={link} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
-                        <FaGithub className="text-base"/>
+                        <FaHashnode className="text-base"/>
                         <span>Blog Link</span>
                     </a>
                 </div>

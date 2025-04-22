@@ -82,7 +82,7 @@ const AboutSection:FC = () => {
 
         <p id="content">
           Hello 👋, I am <i className="text-rose-400 font-semibold decoration-rose-300 wavy-underline">Vishnu Prasad Korada</i>,<br />
-          As a Computer Science pre-final student with a passion for Software Development AI/ML, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development and Machine Learning Algorithms."/>🧑🏽‍💻
+          As a Computer Science pre-final student with a passion for Software Development and Designing, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development, Mobile Development and Machine Learning Algorithms."/>🧑🏽‍💻
           <br />
           Beyond Programming, I also immerse myself in the world of <Special text="Graphic Designing "/> often as a creative outlet.🎨 I think there is more to design than aesthetics and I am constantly boosting my creative output by applying it in competitions, projects, and practical university scenarios.
           <br />

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaGithub } from "react-icons/fa6";
+import { GoFileDirectoryFill } from "react-icons/go";
 gsap.registerPlugin(ScrollTrigger)
 
 interface ProjectCardProps {
@@ -58,7 +58,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
                 <br />
                 <div>
                     <a href={sourceLink} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
-                        <FaGithub className="text-base"/>
+                        <GoFileDirectoryFill className="text-base"/>
                         <span>Source Code</span>
                     </a>
                     { <a href=""></a>}

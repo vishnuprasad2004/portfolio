@@ -10,10 +10,10 @@ import SkillsSection from "@/components/layout/SkillsSection";
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap"
-import ProjectCard from "@/components/ProjectCard";
 import BlogCard from "@/components/BlogCard";
 import { FaHashnode } from "react-icons/fa6";
 import Heading from "@/components/Heading";
+import Loader from "@/components/Loader";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
@@ -57,6 +57,17 @@ const Home = () => {
     });
 
   })
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false)
+    }, 2000) // 2 seconds
+
+    return () => clearTimeout(timeout)
+  }, [])
+
+  if (loading) return <Loader />
   
   return (
     <>
