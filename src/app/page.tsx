@@ -14,6 +14,7 @@ import BlogCard from "@/components/BlogCard";
 import { FaHashnode } from "react-icons/fa6";
 import Heading from "@/components/Heading";
 import Loader from "@/components/Loader";
+import ExperienceSection from "@/components/layout/ExperienceSection";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
@@ -67,7 +68,7 @@ const Home = () => {
     return () => clearTimeout(timeout)
   }, [])
 
-  if (loading) return <Loader />
+  // if (loading) return <Loader />
   
   return (
     <>
@@ -93,6 +94,7 @@ const Home = () => {
         <AboutSection/>
         <SkillsSection/>
         <ProjectsSection/>
+        <ExperienceSection/>
         {/* <ContactSection/> */}
         {/* Design Section */}
         {/* Blogs Section */}
