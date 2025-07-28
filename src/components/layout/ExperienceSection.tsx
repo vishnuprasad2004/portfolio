@@ -12,8 +12,8 @@ function ExperienceSection() {
   return (
     <div className='h-full w-full flex flex-col items-center justify-center gap-y-4 p-4'>
       <Heading text="Experience" />
-      {experiences.map((experience) => {
-        return (<ExperienceCard company={experience.company} description={experience.description} duration={experience.duration} position={experience.position}/>)
+      {experiences.map((experience,key) => {
+        return (<ExperienceCard key={key} company={experience.company} description={experience.description} duration={experience.duration} position={experience.position}/>)
       })}
     </div>
 
