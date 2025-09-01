@@ -15,7 +15,8 @@ const projects: project[] = [
     description: "Momentum is a task management app that goes beyond traditional to-do lists. Unlike standard apps where tasks get forgotten after the deadline, Momentum ensures you stay on track with AI-generated reminders inspired by Duolingo’s notification system.",
     image:"/Momentum.png",
     latest: true,
-    sourceLink:"https://github.com/vishnuprasad2004/momentum",
+    deploymentLink:"https://vishnuprasad2004.github.io/momentum-backend/",
+    sourceLink:"https://gitub.com/vishnuprasad2004/momentum/",
     technologiesUsed:["React Native Expo", "Supabase", "React.js", "Typescript", "Redux-Toolkit"]
   },
   {

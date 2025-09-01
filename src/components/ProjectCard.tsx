@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoFileDirectoryFill } from "react-icons/go";
+import { LuExternalLink } from "react-icons/lu";
 gsap.registerPlugin(ScrollTrigger)
 
 interface ProjectCardProps {
@@ -17,7 +18,7 @@ interface ProjectCardProps {
 }
 
 
-const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sourceLink, latest, technologiesUsed}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sourceLink, latest, technologiesUsed, deploymentLink}) => {
     
     const cardRef = React.useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -56,11 +57,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
                     })}
                 </div>
                 <br />
-                <div>
+                <div className="flex gap-2">
                     <a href={sourceLink} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
                         <GoFileDirectoryFill className="text-base"/>
                         <span>Source Code</span>
                     </a>
+                    {deploymentLink && (<a href={deploymentLink || ""} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
+                        <LuExternalLink className="text-base"/>
+                        <span>Link</span>
+                    </a>)}
                     { <a href=""></a>}
                 </div>
             </div>
