@@ -1,6 +1,6 @@
 import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
 import { FaHashnode } from "react-icons/fa6";
-import { SiHackerrank } from "react-icons/si";
+import { SiHackerrank, SiLeetcode } from "react-icons/si";
 
 const socials = [
   {
@@ -13,21 +13,26 @@ const socials = [
     link: "https://github.com/vishnuprasad2004",
     icon: BsGithub,
   },
-  {
-    name: "Twitter",
-    link: "https://twitter.com/the_vishnupk",
-    icon: BsTwitterX,
-  },
+  // {
+  //   name: "Twitter",
+  //   link: "https://twitter.com/the_vishnupk",
+  //   icon: BsTwitterX,
+  // },
   {
     name: "Hashnode",
     link: "https://vishnuprasadkorada.hashnode.dev/",
     icon: FaHashnode
   },
   {
-    name: "Instagram",
-    link: "https://instagram.com/the_vishnuprasadkorada",
-    icon: BsInstagram,
+    name: "Leetcode",
+    link: "https://leetcode.com/vishnuprasadkorada/",
+    icon: SiLeetcode
   },
+  // {
+  //   name: "Instagram",
+  //   link: "https://instagram.com/the_vishnuprasadkorada",
+  //   icon: BsInstagram,
+  // },
   // {
   //   name: "Medium",
   //   link: "",

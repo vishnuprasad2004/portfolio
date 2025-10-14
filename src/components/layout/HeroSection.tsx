@@ -90,7 +90,7 @@ const HeroSection: FC = () => {
         <div className="flex flex-col justify-center items-center w-screen lg:hover:scale-110 duration-700">
           <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <div className="wave-hand inline-block" ref={handWaveRef}><Image src="/hand-wave.png" height={32} width={32} alt="hello"/></div>, I am</span>
           <span className={spaceMono.className + " lg:text-8xl select-none text-3xl my-name brightness-150 scale-0 opacity-0"} ref={nameRef} aria-label="Vishnu Prasad Korada">VishnuPrasadKorada™</span>
-          <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef} aria-label="Developer and Designer">Developer & Designer</span>
+          <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef} aria-label="Developer and Designer">Aspiring Software Developer & Designer</span>
 
           <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className={spaceMono.className + " p-3 pt-1 pb-1 rounded-full m-3 border-2 border-solid border-[#7275DE] border-opacity-80 bg-[#7275DE]/20 select-none  duration-1000"}>Download My Resume</a>
         </div>
