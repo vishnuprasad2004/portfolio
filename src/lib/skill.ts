@@ -1,7 +1,7 @@
 import { RiSupabaseLine } from "react-icons/ri";
 import { FaReact, FaJsSquare, FaHtml5, FaPython, FaCss3 } from "react-icons/fa";
 import { TbBrandRedux } from "react-icons/tb";
-import { SiPostman, SiExpo, SiTypescript, SiExpress, SiInkscape, SiFlask, SiVercel, SiNextdotjs, SiTailwindcss, SiSqlite, SiCanva, } from "react-icons/si";
+import { SiPostman, SiExpo, SiTypescript, SiExpress, SiInkscape, SiFlask, SiVercel, SiNextdotjs, SiTailwindcss, SiSqlite, SiCanva, SiDocker, SiKubernetes, SiAmazonaws, } from "react-icons/si";
 import { DiJava, DiMongodb } from "react-icons/di";
 import { IconType } from "react-icons";
 import { IoLogoNodejs } from "react-icons/io5";
@@ -17,6 +17,8 @@ const skills:Skill[] = [
     { name: "Express.js", icon: SiExpress }, 
     { name: "Typescript", icon: SiTypescript },
     { name: "Java", icon: DiJava },
+    { name: "Docker", icon: SiDocker },
+    { name: "Kubernetes", icon: SiKubernetes },
     // { name: "C", icon: DIC},
     { name: "MongoDB", icon: DiMongodb },
     { name: "mySQL",icon: SiSqlite },
@@ -34,6 +36,7 @@ const skills:Skill[] = [
     { name: "Canva", icon: SiCanva},
     { name: "Inkscape", icon: SiInkscape },
     { name:"Supabase", icon: RiSupabaseLine },
+    { name: "AWS", icon: SiAmazonaws } 
 ]
 
 

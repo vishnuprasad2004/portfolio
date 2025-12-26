@@ -81,14 +81,22 @@ const AboutSection:FC = () => {
         <Image id="dp" ref={displayPictureRef} src={"/Vishnu Prasad Korada DP 2.jpg"} alt="my dp" className="rounded-full lg:w-72 m-2 w-2/3 select-none ring-around" width={288} height={288} />
 
         <p id="content">
-          Hello 👋, I am <i className="text-rose-400 font-semibold decoration-rose-300 wavy-underline">Vishnu Prasad Korada</i>,<br />
-          As a Computer Science pre-final student with a passion for Software Development and Designing, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development, Mobile Development and Machine Learning Algorithms."/>🧑🏽‍💻
+          I&apos;m <i className="text-rose-400 font-semibold decoration-rose-300 wavy-underline">Vishnu Prasad Korada</i>, a final year Computer Science student interested in <Special text="building scalable software and learning practical ML applications"/>. I work mainly with TypeScript, MERN stack, MongoDB, PostgresDB, Java and Python.
+
+          I enjoy solving problems and turning ideas into working projects. Some of my recent work includes a customised AI-integrated high school EduTech app and a smart notification based reminder system. These projects helped me improve my backend skills, API design and system thinking.
+
+          Outside development, I explore UI/UX and graphic designing as a creative outlet.
+
+          I&apos;m always looking to learn more, work on meaningful projects and grow through hands on development, let&apos;s connect and explore potential collaborations. Together, we can make a difference!
+
+          {/* Hello 👋, I am <i className="text-rose-400 font-semibold decoration-rose-300 wavy-underline">Vishnu Prasad Korada</i>,<br />
+          As a Computer Science final student with a passion for Software Development and Designing, I am dedicated to pushing the boundaries of technology and innovation. I am working on understanding <Special text="Full Stack Development, Mobile Development and Machine Learning Algorithms."/>🧑🏽‍💻
           <br />
           Beyond Programming, I also immerse myself in the world of <Special text="Graphic Designing "/> often as a creative outlet.🎨 I think there is more to design than aesthetics and I am constantly boosting my creative output by applying it in competitions, projects, and practical university scenarios.
-          <br />
+          <br /> */}
           {/* Beyond the digital realm, my fascination with geopolitics, space exploration and scientific research drives me to stay informed about the latest advancements. */}
           <br />
-          <b>Let&apos;s connect and explore the limitless possibilities of Development and Design ... 😊✨✨</b>
+          {/* <b>Let&apos;s connect and explore the limitless possibilities of Development and Design ... 😊✨✨</b> */}
         </p>
       </div>
     </div>
