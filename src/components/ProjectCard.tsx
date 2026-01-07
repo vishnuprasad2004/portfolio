@@ -52,9 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
                 <div className="flex flex-wrap mt-1 items-center gap-2">
                     {technologiesUsed.map((technology, i) => {
                         if (i<3) return(
-                            <div className="">
-                                <span key={technology.name} className="bg-[#7275DE]/15 text-[#7275DE] p-1 px-2 rounded-full text-xs font-semibold">{technology.name}</span>
-                            </div>
+                            <span key={technology.name} className="bg-[#7275DE]/15 text-[#7275DE] p-1 px-2 rounded-full text-xs font-semibold">{technology.name}</span>
                         )
                     })}
                     {technologiesUsed.length > 3 && <span className="text-neutral-400 text-sm">+{technologiesUsed.length-3}</span>}
