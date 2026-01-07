@@ -15,11 +15,12 @@ interface ProjectCardProps {
     deploymentLink?: string,
     latest: boolean,
     technologiesUsed: { name: string, icon: string|null }[]
+    onOpen?: () => void;
 }
 
 
-const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sourceLink, latest, technologiesUsed, deploymentLink}) => {
-    
+const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sourceLink, latest, technologiesUsed, deploymentLink, onOpen}) => {
+
     const cardRef = React.useRef<HTMLDivElement>(null);
     useEffect(() => {
         if(cardRef.current) {
@@ -67,6 +68,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
                         <LuExternalLink className="text-base"/>
                         <span>Link</span>
                     </a>)}
+                    <button onClick={() => onOpen && onOpen()} className="px-4 py-2 bg-neutral-800 rounded-md text-sm">
+                        View Project Details
+                    </button>
                     { <a href=""></a>}
                 </div>
             </div>

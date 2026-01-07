@@ -4,11 +4,14 @@ import projects from "@/lib/projects";
 import ProjectCard from "../ProjectCard";
 import { Space_Mono } from "next/font/google";
 import Heading from "../Heading";
-import React from "react";
+import React, { useState } from "react";
+import ProjectModal from "../ProjectModal";
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 
 const ProjectsSection: React.FC = () => {
-    return (
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<typeof projects[number] | null>(null);
+  return (
         <div id="projects" className={spaceMono.className + " text-center h-full w-screen p-5"}>
           <Heading text="Featured Projects"/>
           <div className="flex flex-grow pt-10 flex-col lg:flex-row justify-evenly flex-wrap gap-4 lg:items-start items-center">
@@ -23,10 +26,14 @@ const ProjectsSection: React.FC = () => {
                   deploymentLink={project.deploymentLink || ""}
                   latest={project.latest}
                   technologiesUsed={project.technologiesUsed}
+                  onOpen={() => { setSelectedProject(project); setOpen(true); }}
                 />
               )
             })}
           </div>
+          {selectedProject && (
+            <ProjectModal open={open} onClose={() => setOpen(false)} project={selectedProject} />
+          )}
         </div>
     )
 }
