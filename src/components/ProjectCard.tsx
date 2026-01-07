@@ -14,7 +14,7 @@ interface ProjectCardProps {
     sourceLink: string,
     deploymentLink?: string,
     latest: boolean,
-    technologiesUsed:string[]
+    technologiesUsed: { name: string, icon: string|null }[]
 }
 
 
@@ -47,14 +47,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, image, sou
                     <b>{title}</b><br/>
                     {latest && <div className="rounded-sm bg-[#FFB355]/15 text-yellow-300 px-1">New</div>}
                 </div>
-                <span className="text-sm text-neutral-300">{description}</span>
+                <span className="text-sm text-neutral-300 leading-none">{description.substring(0,200) + (description.length>200?" ...":"")}</span>
                 <br />
-                <div className="flex flex-wrap mt-1 gap-2">
-                    {technologiesUsed.map(technology => {
-                        return(
-                            <span key={technology} className="text-xs p-1 px-2 rounded-full bg-[#7275DE]/15 text-[#7275DE] font-semibold">{technology}</span>
+                <div className="flex flex-wrap mt-1 items-center gap-2">
+                    {technologiesUsed.map((technology, i) => {
+                        if (i<3) return(
+                            <div className="">
+                                <span key={technology.name} className="bg-[#7275DE]/15 text-[#7275DE] p-1 px-2 rounded-full text-xs font-semibold">{technology.name}</span>
+                            </div>
                         )
                     })}
+                    {technologiesUsed.length > 3 && <span className="text-neutral-400 text-sm">+{technologiesUsed.length-3}</span>}
                 </div>
                 <br />
                 <div className="flex gap-2">

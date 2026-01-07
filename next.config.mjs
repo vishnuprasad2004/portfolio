@@ -19,6 +19,12 @@ const nextConfig = {
                 hostname:"github.com",
                 port:"",
                 pathname:"/user-attachments/assets/**"
+            },
+            {
+                protocol: "https",
+                hostname: "cdn.simpleicons.org",
+                port: "",
+                pathname: "/**"
             }
         ]
     }
