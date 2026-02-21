@@ -12,6 +12,25 @@ type project = {
 
 const projects: project[] = [
   {
+    title: "Ecommerce Microservices Backend with Kubernetes",
+    slug:"ecommerce-microservices-kubernetes",
+    description: `The application is split into independent services such as User Service, Product Service, Order Service, and supporting infrastructure components. Each service is developed, containerized, and deployed independently locally using minikube, allowing the system to scale specific services based on demand rather than scaling the entire application.\n
+    I made this project to understand how scalable and large-scale software systems are designed, deployed, scaled, and managed in real-world environments. Instead of building a monolithic application, this project follows a microservices architecture similar to what is used in production-grade e-commerce platforms.`,
+    image:"/Ecommerce-Microservices-Kubernetes.jpg",
+    sourceLink:"https://github.com/vishnuprasad2004/ecommerce-microservices",
+    technologiesUsed:[
+      {name: "Kubernetes", icon: "https://cdn.simpleicons.org/kubernetes"}, 
+      {name: "Docker", icon: "https://cdn.simpleicons.org/docker"}, 
+      {name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs"}, 
+      {name: "Typescript", icon: "https://cdn.simpleicons.org/typescript"}, 
+      {name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb"},
+      {name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql"},
+      {name: "Postman", icon: "https://cdn.simpleicons.org/postman"},
+      {name: "AWS S3", icon: "https://cdn.simpleicons.org/aws"},
+    ],
+    latest:true
+  },
+  {
     title:"Momentum: Smart Task Manager",
     slug:"momentum-task-manager",
     description: "Momentum is a AI-powered task management app that goes beyond traditional to-do lists. Unlike standard apps where tasks get forgotten after the deadline, Momentum ensures you stay on track with AI-generated reminders inspired by Duolingo’s notification system.",
