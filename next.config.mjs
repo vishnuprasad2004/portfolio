@@ -25,6 +25,12 @@ const nextConfig = {
                 hostname: "cdn.simpleicons.org",
                 port: "",
                 pathname: "/**"
+            },
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com",
+                port: "",
+                pathname: "/**"
             }
         ]
     }

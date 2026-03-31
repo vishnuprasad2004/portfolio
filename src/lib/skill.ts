@@ -1,7 +1,7 @@
 import { RiSupabaseLine } from "react-icons/ri";
 import { FaReact, FaJsSquare, FaHtml5, FaPython, FaCss3 } from "react-icons/fa";
 import { TbBrandRedux } from "react-icons/tb";
-import { SiPostman, SiExpo, SiTypescript, SiExpress, SiInkscape, SiFlask, SiVercel, SiNextdotjs, SiTailwindcss, SiCanva, SiDocker, SiKubernetes, SiAmazonaws, } from "react-icons/si";
+import { SiPostman, SiExpo, SiTypescript, SiExpress, SiInkscape, SiFlask, SiVercel, SiNextdotjs, SiTailwindcss, SiCanva, SiDocker, SiKubernetes, SiAmazonaws, SiSpringboot, SiSpringsecurity, } from "react-icons/si";
 import { DiJava, DiMongodb } from "react-icons/di";
 import { IconType } from "react-icons";
 import { IoLogoNodejs } from "react-icons/io5";
@@ -19,6 +19,8 @@ const skills:Skill[] = [
     { name: "Express.js", icon: SiExpress, color: "#FFFFFF" }, 
     { name: "Typescript", icon: SiTypescript, color: "#3178C6" },
     { name: "Java", icon: DiJava,  color: "#007396" },
+    { name: "Spring Boot", icon: SiSpringboot,  color: "#0f9600" },
+    { name: "Spring Security", icon: SiSpringsecurity,  color: "#0f9600" },
     { name: "Docker", icon: SiDocker, color: "#2496ED" },
     { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
     // { name: "C", icon: DIC},

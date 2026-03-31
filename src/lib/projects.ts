@@ -12,6 +12,22 @@ type project = {
 
 const projects: project[] = [
   {
+    title: "Vestera - Paper Trading Platform",
+    slug:"vestera-paper-trading-platform",
+    description: `A competitive paper trading platform for NYSE stocks with AI-guided insights, built using Spring Boot, Spring AI, and PostgreSQL. Implemented RBAC, whitelist validation, circuit breaker pattern, and Caffeine caching to ensure security, fault tolerance, and high performance.`,
+    image:"https://images.unsplash.com/photo-1620266757065-5814239881fd?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRyYWRpbmd8ZW58MHx8MHx8fDA%3D",
+    sourceLink:"https://github.com/vishnuprasad2004/vestara-platform",
+    technologiesUsed:[
+      {name: "Spring Boot", icon: "https://cdn.simpleicons.org/springboot"}, 
+      {name: "Spring Security", icon: "https://cdn.simpleicons.org/springsecurity"},
+      {name: "Spring AI", icon: "https://cdn.simpleicons.org/spring"},
+      {name: "Docker", icon: "https://cdn.simpleicons.org/docker"}, 
+      {name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql"},
+      {name: "Postman", icon: "https://cdn.simpleicons.org/postman"},
+    ],
+    latest:true
+  },
+  {
     title: "Ecommerce Microservices Backend with Kubernetes",
     slug:"ecommerce-microservices-kubernetes",
     description: `The application is split into independent services such as User Service, Product Service, Order Service, and supporting infrastructure components. Each service is developed, containerized, and deployed independently locally using minikube, allowing the system to scale specific services based on demand rather than scaling the entire application.\n
@@ -28,7 +44,7 @@ const projects: project[] = [
       {name: "Postman", icon: "https://cdn.simpleicons.org/postman"},
       {name: "AWS S3", icon: "https://cdn.simpleicons.org/aws"},
     ],
-    latest:true
+    latest:false
   },
   {
     title:"Momentum: Smart Task Manager",
