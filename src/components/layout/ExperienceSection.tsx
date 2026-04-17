@@ -10,13 +10,24 @@ import experiences from '@/lib/experiences'
  */
 function ExperienceSection() {
   return (
-    <div className='h-full w-full flex flex-col items-center justify-center gap-y-4 p-4'>
-      <Heading text="Experience" />
-      {experiences.map((experience,key) => {
-        return (<ExperienceCard key={key} company={experience.company} description={experience.description} duration={experience.duration} position={experience.position}/>)
-      })}
-    </div>
-
+    <section className="w-full py-10 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6">
+        <Heading text="Experience" />
+        <div className="w-full space-y-5">
+          {experiences.slice().reverse().map((experience, key) => (
+            <ExperienceCard
+              key={key}
+              company={experience.company}
+              description={experience.description}
+              duration={experience.duration}
+              position={experience.position}
+              location={experience.location}
+              technologies={experience.technologies}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

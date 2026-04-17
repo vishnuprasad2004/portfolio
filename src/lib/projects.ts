@@ -43,8 +43,9 @@ const projects: project[] = [
       {name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql"},
       {name: "Postman", icon: "https://cdn.simpleicons.org/postman"},
       {name: "AWS S3", icon: "https://cdn.simpleicons.org/aws"},
+      {name: "Redis", icon: "https://cdn.simpleicons.org/redis"},
     ],
-    latest:false
+    latest: true
   },
   {
     title:"Momentum: Smart Task Manager",
@@ -53,7 +54,7 @@ const projects: project[] = [
     image:"/Momentum.png",
     latest: false,
     deploymentLink:"https://vishnuprasad2004.github.io/momentum-backend/",
-    sourceLink:"https://gitub.com/vishnuprasad2004/momentum/",
+    sourceLink:"https://github.com/vishnuprasad2004/momentum/",
     technologiesUsed:[
       {name: "React Native Expo", icon: "https://cdn.simpleicons.org/expo"}, 
       {name: "Supabase", icon: " https://cdn.simpleicons.org/supabase"}, 
@@ -75,7 +76,7 @@ const projects: project[] = [
       {name: "Expo", icon: "https://cdn.simpleicons.org/expo"}, 
       {name: "PostgresDB", icon: "https://cdn.simpleicons.org/postgresql"},
     ],
-    latest: true
+    latest: false
   },
   // {
   //   title: "Next Auth App",

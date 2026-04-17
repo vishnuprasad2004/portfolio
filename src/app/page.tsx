@@ -15,6 +15,7 @@ import { FaHashnode } from "react-icons/fa6";
 import Heading from "@/components/Heading";
 import Loader from "@/components/Loader";
 import ExperienceSection from "@/components/layout/ExperienceSection";
+import ContactSection from "@/components/layout/ContactSection";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
@@ -95,13 +96,13 @@ const Home = () => {
         <SkillsSection/>
         <ProjectsSection/>
         <ExperienceSection/>
-        {/* <ContactSection/> */}
         {/* Design Section */}
         {/* Blogs Section */}
         <br />
         <br />
         <Heading text="Blogs"/>
         <BlogCard image="https://github.com/user-attachments/assets/5bcf3bc0-5b4b-4e60-b6ce-2f9a15666f7f" title="But ... What is JSON Schema" domains={["config","Backend"]} description="Have you ever wondered how in node.js, package.json and package-lock.json file's structure is predefined and prompts a description whenever we hover over a key ... also it has a set of predefined keys and values." link="https://vishnuprasadkorada.hashnode.dev/but-what-is-json-schema" platforms={FaHashnode} latest={false}/>
+        <ContactSection/>
       </main>
       <footer className={spaceMono.className + " text-rose-500 text-center pt-10 lg:pb-2 pb-16 backdrop-blur-sm"}>
           ©{new Date().getFullYear()} ❤️ Designed and Implemented by <i><Link href="https://github.com/vishnuprasad2004/portfolio">Vishnu Prasad Korada</Link></i>

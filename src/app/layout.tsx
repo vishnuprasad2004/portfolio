@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-vishnu-prasad-korada.vercel.app"),
+  metadataBase: new URL("https://vishnu-prasad-korada.vercel.app"),
   title: "Vishnu Prasad Korada | Portfolio",
   description: "Portfolio for a developer cum designer, generated through typing and love",
   keywords: ["portfolio", "nextjs", "developer", "student", "designer", "Vishnu Prasad Korada"],

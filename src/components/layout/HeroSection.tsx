@@ -1,12 +1,15 @@
 "use client";
-import { Lacquer, Space_Mono, UnifrakturCook } from "next/font/google";
+import { Lacquer, Plus_Jakarta_Sans, Space_Mono, Unbounded, UnifrakturCook } from "next/font/google";
 import { FC, useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import Image from "next/image";
+import { HiDownload } from "react-icons/hi";
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 const unifrakturCook = UnifrakturCook({ weight: "700", subsets: ["latin"] })
 const lacquer = Lacquer({ weight: "400", subsets: ["latin"] })
+const unbounded = Unbounded({ weight: "400", subsets: ["latin"] })
+
 
 
 const HeroSection: FC = () => {
@@ -87,12 +90,22 @@ const HeroSection: FC = () => {
       
       <div className="h-screen flex justify-center items-center snap-start relative" id="hero">
           {/* <Image src={"/worm.png"} alt="worm" height={100} width={100} className="absolute hidden lg:block bottom-16 left-0 rotate-45 lg:hover:rotate-[-60deg] scale-110 lg:hover:translate-y-11 lg:hover:-translate-x-7 duration-500"/> */}
-        <div className="flex flex-col justify-center items-center w-screen lg:hover:scale-110 duration-700">
+        <div className="flex flex-col justify-center items-center w-screen duration-700">
           <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <div className="wave-hand inline-block" ref={handWaveRef}><Image src="/hand-wave.png" height={32} width={32} alt="hello"/></div>, I am</span>
           <span className={spaceMono.className + " lg:text-8xl select-none text-3xl my-name brightness-150 scale-0 opacity-0"} ref={nameRef} aria-label="Vishnu Prasad Korada">VishnuPrasadKorada™</span>
-          <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef} aria-label="Developer and Designer">Aspiring Software Dev Engineer & Designer</span>
+          <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef} aria-label="Developer and Designer">Software Engineer & Designer</span>
 
-          <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className={spaceMono.className + " p-3 pt-1 pb-1 rounded-full m-3 border-2 border-solid border-[#7275DE] border-opacity-80 bg-[#7275DE]/20 select-none  duration-1000"}>Download My Resume</a>
+          <div className="flex lg:flex-row flex-col mt-5 ">
+            <a href="./Vishnu Prasad Korada Resume.pdf" download="./Vishnu Prasad Korada Resume.pdf" className={`${spaceMono.className} flex items-center py-2 px-5 rounded-full bg-white text-black hover:bg-gray-100 transition-colors duration-300 select-none m-1`}>
+              <HiDownload className="inline-block mr-2" />
+              <p>Download My Resume</p>
+            </a>
+            <a href="" 
+              onClick={(e) => {e.preventDefault(); document.getElementById("projects")?.scrollIntoView({behavior:"smooth"})}} 
+              className={`${spaceMono.className} flex items-center py-2 px-5 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-300 select-none m-1`}>
+              <p>Check out my Projects</p>
+            </a>
+          </div>
         </div>
       </div>
     </>
