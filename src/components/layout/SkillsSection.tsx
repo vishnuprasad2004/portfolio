@@ -17,9 +17,12 @@ interface SkillChipProps {
 
 const SkillChip: React.FC<SkillChipProps> = ({ skillName, skillIcon:Icon, color }) => {
   return (
-    <div className="opacity-0 skill flex flex-row items-center justify-center gap-2 px-4 py-1 text-base rounded-full border-[#FFB355]/50 border-2 border-solid">
-      <Icon color={color} size={24}/>
-      <p className=""> {skillName}</p>
+    <div
+      className="opacity-0 skill flex items-center backdrop-blur-md gap-2 rounded-full border-2 border-[#FFB355]/50 bg-white/5 px-4 py-2 text-sm transition duration-200 ease-out hover:border-[#FFB355] hover:bg-[#FFB355]/10 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB355]/60"
+      aria-label={`${skillName} skill`}
+    >
+      <Icon color={color} size={20} />
+      <p className="whitespace-nowrap">{skillName}</p>
     </div>
   )
 }

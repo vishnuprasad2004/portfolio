@@ -4,6 +4,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })
 const unifrakturCook = UnifrakturCook({ weight: "700", subsets: ["latin"] })
@@ -105,6 +106,14 @@ const HeroSection: FC = () => {
               className={`${spaceMono.className} flex items-center py-2 px-5 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-300 select-none m-1`}>
               <p>Check out my Projects</p>
             </a>
+          </div>
+
+          <div>
+            {/* linkedin icon button */}
+            <a href="https://www.linkedin.com/in/vishnuprasad-korada/" target="_blank" rel="noopener noreferrer" className={`${spaceMono.className} flex items-center py-4 px-4 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-300 select-none m-1`}>
+              <FaLinkedinIn />
+            </a>
+            
           </div>
         </div>
       </div>
