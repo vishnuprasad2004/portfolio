@@ -12,13 +12,23 @@ interface BlogCardProps {
     description:string;
     image: string,
     link: string,
-    latest: boolean,
+    created_at: Date,
     domains: string[],
-    platforms: IconType,
+    platform: IconType,
 }
 
+const isLatest = (date: string | Date): boolean => {
+  const inputDate = new Date(date);
+  const now = new Date();
 
-const BlogCard: React.FC<BlogCardProps> = ({title, description, image, link, latest, domains, platforms}) => {
+  const oneMonthAgo = new Date();
+  oneMonthAgo.setMonth(now.getMonth() - 1);
+
+  return inputDate > oneMonthAgo;
+};
+
+
+const BlogCard: React.FC<BlogCardProps> = ({title, description, image, created_at, link, domains, platform:Icon}) => {
     
     const cardRef = React.useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -31,8 +41,9 @@ const BlogCard: React.FC<BlogCardProps> = ({title, description, image, link, lat
                     trigger: cardRef.current,
                     toggleActions: "reverse play restart play",
                     start: "top bottom",
-                    end: "top 60%",
-                    scrub: true
+                    end: "top 70%",
+                    scrub: true,
+                    // markers: true
                 }
             })
         }
@@ -40,14 +51,17 @@ const BlogCard: React.FC<BlogCardProps> = ({title, description, image, link, lat
 
 
     return(
-        <div ref={cardRef} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/4 w-[90%] lg:m-0 h-2/6 text-left opacity-0 scale-0">
-            <Image src={image} alt="image about project" className="rounded-xl w-full h-[200px]" width={500} height={500}/>
+        <div ref={cardRef} className=" bg-neutral-900 p-2 rounded-2xl flex flex-col lg:w-1/3 w-[90%] lg:m-0 h-2/6 text-left opacity-0 scale-0">
+            <div className="relative">
+                <Image src={image} alt="image about project" className="rounded-2xl w-full h-[200px]" width={500} height={500}/>
+                {isLatest(created_at) && <div className="absolute inset-0 bg-gradient-to-bl from-black/65 to-transparent rounded-2xl"></div>}
+                {isLatest(created_at) && <div className="absolute top-2 right-2 rounded-lg bg-green-500/15 text-green-500 px-2 py-1 text-xs font-semibold">new</div>}
+            </div>
             <div className="py-2 px-1">
                 <div className="flex justify-between items-center gap-x-1">
                     <b>{title}</b><br/>
-                    {latest && <div className="rounded-sm bg-[#FFB355]/15 text-yellow-300 px-1">New</div>}
                 </div>
-                <span className="text-sm text-neutral-300">{description}</span>
+                <span className="text-sm text-neutral-300">{description.slice(0, 300)}</span>
                 <br />
                 <div className="flex flex-wrap mt-1 gap-2">
                     {domains.map(domain => {
@@ -59,8 +73,8 @@ const BlogCard: React.FC<BlogCardProps> = ({title, description, image, link, lat
                 <br />
                 <div>
                     <a href={link} className="flex gap-x-1 items-center justify-center text-xs w-fit p-2 rounded-xl bg-neutral-800" target="_blank">
-                        <FaHashnode className="text-base"/>
-                        <span>Blog Link</span>
+                        <Icon className="text-base"/> 
+                        <span>Read More</span>
                     </a>
                 </div>
             </div>

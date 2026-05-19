@@ -1,4 +1,5 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsGitlab, BsInstagram, BsLinkedin, BsMedium, BsTwitterX } from "react-icons/bs";
+import { FaMediumM } from "react-icons/fa";
 import { FaHashnode } from "react-icons/fa6";
 import { SiHackerrank, SiLeetcode } from "react-icons/si";
 
@@ -8,10 +9,15 @@ const socials = [
     link: "https://linkedin.com/in/vishnu-prasad-korada/",
     icon: BsLinkedin,
   },
+  // {
+  //   name: "Github",
+  //   link: "https://github.com/vishnuprasad2004",
+  //   icon: BsGithub,
+  // },
   {
-    name: "Github",
-    link: "https://github.com/vishnuprasad2004",
-    icon: BsGithub,
+    name: "GitLab",
+    link: "https://gitlab.com/vishnuprasad2004",
+    icon: BsGitlab
   },
   // {
   //   name: "Twitter",
@@ -33,11 +39,11 @@ const socials = [
   //   link: "https://instagram.com/the_vishnuprasadkorada",
   //   icon: BsInstagram,
   // },
-  // {
-  //   name: "Medium",
-  //   link: "",
-  //   icon: BsMedium
-  // },
+  {
+    name: "Medium",
+    link: "https://medium.com/@vishnuprasadkorada",
+    icon: FaMediumM
+  },
   {
     name: "HackerRank",
     link: "https://www.hackerrank.com/profile/vishnuprasadkor1",

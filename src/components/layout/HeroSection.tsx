@@ -110,7 +110,7 @@ const HeroSection: FC = () => {
 
           <div>
             {/* linkedin icon button */}
-            <a href="https://www.linkedin.com/in/vishnuprasad-korada/" target="_blank" rel="noopener noreferrer" className={`${spaceMono.className} flex items-center py-4 px-4 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-300 select-none m-1`}>
+            <a href="https://www.linkedin.com/in/vishnu-prasad-korada/" target="_blank" rel="noopener noreferrer" className={`${spaceMono.className} flex items-center py-4 px-4 rounded-full border border-white hover:bg-white hover:text-black transition-colors duration-300 select-none m-1`}>
               <FaLinkedinIn />
             </a>
             
