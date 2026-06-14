@@ -28,6 +28,13 @@ const experiences:ExperienceType[] = [
 • Applied reliability engineering practices including idempotency keys, correlation ID propagation for distributed tracing, and multi-tier caching strategies`,
     technologies:["Java", "Spring Boot", "Spring Security", "MySQL", "Hibernate JPA", "Postman", "REST APIs"],
     location:"Hyderabad, India",
+  },
+  {
+    company: "MindX360 Technologies",
+    description: "",
+    duration: "Jun 2026 - Present",
+    position: "Associate Technical Consultant",
+    location: "Hyderabad, India"
   }
   // {
   //   company:"Google Developers Group on Campus, GIETU",
