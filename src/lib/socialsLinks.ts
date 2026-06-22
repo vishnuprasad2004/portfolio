@@ -9,16 +9,16 @@ const socials = [
     link: "https://linkedin.com/in/vishnu-prasad-korada/",
     icon: BsLinkedin,
   },
-  // {
-  //   name: "Github",
-  //   link: "https://github.com/vishnuprasad2004",
-  //   icon: BsGithub,
-  // },
   {
-    name: "GitLab",
-    link: "https://gitlab.com/vishnuprasad2004",
-    icon: BsGitlab
+    name: "Github",
+    link: "https://github.com/vishnuprasad2004",
+    icon: BsGithub,
   },
+  // {
+  //   name: "GitLab",
+  //   link: "https://gitlab.com/vishnuprasad2004",
+  //   icon: BsGitlab
+  // },
   // {
   //   name: "Twitter",
   //   link: "https://twitter.com/the_vishnupk",
