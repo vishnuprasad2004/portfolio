@@ -45,4 +45,21 @@ const designs: Design[] = [
     { src: "https://github.com/user-attachments/assets/94425035-1884-4046-84c5-66b5f60c7735", orientation: "landscape", alt: "MMC thumbnail" },
 ]
 
-export default designs
+const appDesigns: Design[] = [
+    { src: "/app-screenshots/1.png", orientation: "landscape", alt: "appDesign1" },
+    { src: "/app-screenshots/2.png", orientation: "landscape", alt: "appDesign2" },
+    { src: "/app-screenshots/3.png", orientation: "landscape", alt: "appDesign3" },
+    { src: "/app-screenshots/4.png", orientation: "landscape", alt: "appDesign4" },
+    { src: "/app-screenshots/5.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/6.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/7.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/8.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/9.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/10.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/11.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/12.png", orientation: "landscape", alt: "appDesign5" },
+    { src: "/app-screenshots/13.png", orientation: "landscape", alt: "appDesign5" },
+
+]
+
+export { appDesigns, designs };

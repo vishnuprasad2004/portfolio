@@ -6,7 +6,7 @@ import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import gsap from "gsap";
 import Image from "next/image";
-import designs from "@/lib/designs";
+import {appDesigns, designs} from "@/lib/designs";
 gsap.registerPlugin(ScrollTrigger);
 
 interface DesignPosterProp {
@@ -14,6 +14,11 @@ interface DesignPosterProp {
     src: string,
     orientation: "portrait" | "landscape" | "square",
     alt: string
+}
+
+interface PhoneMockupProps {
+    src: string;
+    alt: string;
 }
 
 const spaceGrotesk = Space_Grotesk({weight:"700", subsets: ["latin"]})
@@ -51,6 +56,29 @@ const DesignPoster: FC<DesignPosterProp> = ({ index, src, orientation, alt }) =>
         />
     </div>
   );
+};
+
+
+
+
+const PhoneMockup: FC<PhoneMockupProps> = ({ src, alt }) => {
+    return (
+        <div className="phone-frame">
+        <div className="phone-notch" />
+        <div className="phone-screen">
+            <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover object-top"
+            draggable={false}
+            />
+        </div>
+        <div className="phone-button phone-button-power" />
+        <div className="phone-button phone-button-volume-up" />
+        <div className="phone-button phone-button-volume-down" />
+        </div>
+    );
 };
 
 const DesignPage = () => {
@@ -105,14 +133,25 @@ const DesignPage = () => {
                         return <DesignPoster key={i} index={i} src={design.src} orientation={design.orientation} alt={design.alt}/>
                     })}
                 </div>
+                {/* scroll the app designs */}
+                <div className="lg:px-4 py-16 w-full">
+                    <div>
+                        <span className={archivo.className + " text-left font-[600] lg:hover:font-[800] lg:w-10 transition-[font-weight] lg:text-8xl text-4xl select-none"} ref={headingText}>FROM FIGMA <br className="hidden lg:block" />TO FRAME</span>
+                        <p className={archivo.className + " my-5 text-xs lg:text-base italic"}>Interfaces I designed along with designing software for hackathons and personal projects. Turns out wireframes and system diagrams 
+    aren't that different — both are just boxes with arrows, lying 
+    to you about how simple the real thing will be.</p>
+                    </div>
+                    <div className="screenshot-scroll">
+                        {appDesigns.map((app, i) => (
+                            <PhoneMockup key={i} src={app.src} alt={app.alt} />
+                        ))}
+                    </div>
+                </div>
             </div>
-            {/* scroll the app designs */}
-            <div>
 
-            </div>
             <SidePanel/>
             <footer className={spaceGrotesk.className + " text-rose-500 text-center lg:pt-10 pt-4 lg:pb-2 pb-16 backdrop-blur-sm lg:text-base text-xs"}>
-                ❤️ Designed and Implemented by Vishnu Prasad Korada <br/> © 2024 All rights reserved.
+                ❤️ Designed and Implemented by Vishnu Prasad Korada <br/> © {new Date().getFullYear()} All rights reserved.
             </footer>
         </>
     )

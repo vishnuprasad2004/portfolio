@@ -274,3 +274,84 @@ body::after {
     background-position: 200%;
   }
 }
+
+
+.phone-frame {
+  position: relative;
+  width: 280px;
+  aspect-ratio: 9 / 19.5; /* modern iPhone-ish ratio */
+  background: #111;
+  border-radius: 46px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 2px #2a2a2a,
+    0 20px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px; /* frame radius minus padding, keeps concentric look */
+  overflow: hidden;
+  background: #000;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 24px;
+  background: #111;
+  border-radius: 0 0 16px 16px;
+  z-index: 10;
+}
+
+.phone-button {
+  position: absolute;
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+
+.phone-button-power {
+  right: -2px;
+  top: 120px;
+  width: 3px;
+  height: 60px;
+}
+
+.phone-button-volume-up {
+  left: -2px;
+  top: 100px;
+  width: 3px;
+  height: 32px;
+}
+
+.phone-button-volume-down {
+  left: -2px;
+  top: 140px;
+  width: 3px;
+  height: 32px;
+}
+
+.screenshot-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 24px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.screenshot-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.screenshot-scroll > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
