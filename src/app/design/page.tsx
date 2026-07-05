@@ -138,7 +138,7 @@ const DesignPage = () => {
                     <div>
                         <span className={archivo.className + " text-left font-[600] lg:hover:font-[800] lg:w-10 transition-[font-weight] lg:text-8xl text-4xl select-none"} ref={headingText}>FROM FIGMA <br className="hidden lg:block" />TO FRAME</span>
                         <p className={archivo.className + " my-5 text-xs lg:text-base italic"}>Interfaces I designed along with designing software for hackathons and personal projects. Turns out wireframes and system diagrams 
-    aren't that different — both are just boxes with arrows, lying 
+    aren&apos;t that different — both are just boxes with arrows, lying 
     to you about how simple the real thing will be.</p>
                     </div>
                     <div className="screenshot-scroll">
