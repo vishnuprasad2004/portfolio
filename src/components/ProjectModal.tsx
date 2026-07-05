@@ -62,7 +62,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ open, onClose, project }) =
                   {project.technologiesUsed.map((t) => (
                     <div key={t.name} className="flex items-center gap-2 bg-neutral-800/30 p-2 rounded-md text-xs">
                       {t.icon ? (
-                        <img src={t.icon} alt={t.name} className="w-4 h-4 rounded-sm" />
+                        <Image src={t.icon} alt={t.name} width={16} height={16} className="w-4 h-4 rounded-sm" />
                       ) : null}
                       <span>{t.name}</span>
                     </div>

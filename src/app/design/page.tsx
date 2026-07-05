@@ -1,13 +1,12 @@
 "use client";
 import SidePanel from "@/components/SidePanel";
-import { Space_Grotesk, Fraunces } from "next/font/google";
+import { Space_Grotesk, Fraunces, Archivo } from "next/font/google";
 import { FC, useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import gsap from "gsap";
 import Image from "next/image";
 import designs from "@/lib/designs";
-import Loader from "@/components/Loader";
 gsap.registerPlugin(ScrollTrigger);
 
 interface DesignPosterProp {
@@ -16,23 +15,53 @@ interface DesignPosterProp {
     orientation: "portrait" | "landscape" | "square",
     alt: string
 }
-const DesignPoster:FC<DesignPosterProp> = ({index, src, orientation, alt}: DesignPosterProp) => {
-
-    if(orientation === "landscape") return <Image key={index} src={src} alt={alt} title={alt} draggable={false} onContextMenu={() => { return false }} height={0} width={200} loading="lazy" className="w-full lg:w-fit h-auto row-span-1 col-span-1 object-cover select-none lg:hover:scale-105 duration-300 rounded-sm card"/>
-    else if(orientation === "portrait") return <Image key={index} src={src} alt={alt} title={alt} draggable={false} onContextMenu={() => { return false }} height={0} width={200} loading="lazy" className="w-full lg:w-fit h-auto row-span-2 object-cover select-none lg:hover:scale-105 duration-300 rounded-sm card"/>
-    else return <Image key={index} src={src} alt={alt} title={alt} draggable={false} onContextMenu={() => { return false }} height={0} width={200} loading="lazy" className="w-full lg:w-fit h-auto row-span-2 object-cover select-none lg:hover:scale-105 duration-300 rounded-sm"/>
-
-}
 
 const spaceGrotesk = Space_Grotesk({weight:"700", subsets: ["latin"]})
 const fraunces = Fraunces({weight: "variable", subsets: ["latin"], style:"italic"})
+const archivo = Archivo({weight: "variable", subsets: ["latin"]})
+
+const orientationConfig = {
+  landscape: { span: "row-span-1", aspect: "aspect-video" },
+  portrait:  { span: "row-span-2", aspect: "aspect-[2/3]" },
+  square:    { span: "row-span-2", aspect: "aspect-square" },
+} as const;
+
+const DesignPoster: FC<DesignPosterProp> = ({ index, src, orientation, alt }) => {
+    const [loaded, setLoaded] = useState(false);
+    const { span, aspect } = orientationConfig[orientation];
+
+    return (
+        <div className={`relative w-full ${span} col-span-1 overflow-hidden rounded-sm`}>
+            {!loaded && (
+            <div className={`absolute inset-0 shimmer ${aspect} rounded-sm`} />
+        )}
+        <Image
+            key={index}
+            src={src}
+            alt={alt}
+            title={alt}
+            draggable={false}
+            onContextMenu={() => false}
+            height={0}
+            width={200}
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+            className={`w-full lg:w-fit h-auto object-cover select-none rounded-sm card
+            transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+        />
+    </div>
+  );
+};
 
 const DesignPage = () => {
     const headingText = useRef(null);
-      const [loading, setLoading] = useState(true)
+    //   const [loading, setLoading] = useState(true)
     
-      
-      useEffect(() => {
+    useEffect(() => {
+        const split = new SplitType(headingText.current!, { types: "chars" });
+        return () => split.revert(); // cleanup on unmount
+    }, []);
+    useEffect(() => {
           gsap.fromTo(
             headingText.current!,
             { scale: 0.2, opacity: 1 },
@@ -51,24 +80,23 @@ const DesignPage = () => {
         );
     })
 
-    useEffect(() => {
-    const timeout = setTimeout(() => {
-        setLoading(false)
-    }, 2000) // 2 seconds
+    // useEffect(() => {
+    // const timeout = setTimeout(() => {
+    //     setLoading(false)
+    // }, 2000) // 2 seconds
 
-    return () => clearTimeout(timeout)
-    }, [])
+    // return () => clearTimeout(timeout)
+    // }, [])
 
-    if (loading) return <Loader />
+    // if (loading) return <Loader />
 
     
     return(
         <>
-            <div className="px-4">
-                <SidePanel/>
-                <div className="text-center pt-4">
-                    <span className={fraunces.className + " lg:text-8xl text-4xl font-bold italic sticker select-none"} ref={headingText}>Gallery of Designs</span>
-                    <p className={spaceGrotesk.className+" my-5 text-xs lg:text-base"}>These are all the posters/banners I created for events or for club instagram using tools like Canva, Inkscape, and Photoshop.</p>
+            <div className="px-4 bg-black/1 backdrop-blur-sm">
+                <div className="pt-5 p-2 pb-0 ">
+                    <span className={archivo.className + " text-left font-[600] lg:hover:font-[800] lg:w-10 transition-[font-weight] lg:text-8xl text-4xl select-none"} ref={headingText}>GALLERY OF <br className="hidden lg:block" />DESIGNS</span>
+                    <p className={spaceGrotesk.className+" text-right my-5 text-xs lg:text-base"}>Hey there! I&apos;m Vishnu Prasad Korada, a passionate designer and developer. <br/> Welcome to my smaller version of design pinterest! </p>
                 </div>
                 {/* The display grid */}
 
@@ -78,6 +106,11 @@ const DesignPage = () => {
                     })}
                 </div>
             </div>
+            {/* scroll the app designs */}
+            <div>
+
+            </div>
+            <SidePanel/>
             <footer className={spaceGrotesk.className + " text-rose-500 text-center lg:pt-10 pt-4 lg:pb-2 pb-16 backdrop-blur-sm lg:text-base text-xs"}>
                 ❤️ Designed and Implemented by Vishnu Prasad Korada <br/> © 2024 All rights reserved.
             </footer>

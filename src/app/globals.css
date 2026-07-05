@@ -25,6 +25,11 @@
   100% {filter: hue-rotate(360deg);}
 }
 
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
 :root {
   --e-global-color-primary: #F4EFEA;
   --e-global-color-secondary: #161616;
@@ -85,6 +90,18 @@
   box-shadow: 0 0 0 2px black, 0 0 0 6px rgba(183, 43, 85, 0.9);
   transition: 1000ms;
 }
+
+.shimmer {
+  background: linear-gradient(
+    to right,
+    #1c1c1c 8%,
+    #2a2a2a 18%,
+    #1c1c1c 33%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -196,6 +213,39 @@ body::after {
         0px -2px 0px white;
   /* stroke: white;
   stroke-width: 160px; */
+}
+
+.char {
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0;
+  transform: translateY(0);
+  will-change: transform, font-weight;
+  transition:
+    font-weight 0.3s ease-out,
+    letter-spacing 0.3s ease-out,
+    transform 0.3s ease-out;
+}
+
+@media (min-width: 1024px) {
+  /* The hovered letter itself */
+  .char:hover {
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    transform: translateY(-4px);
+  }
+
+  /* Next letter — direct sibling combinator */
+  .char:hover + .char {
+    font-weight: 700;
+    transform: translateY(-2px);
+  }
+
+  /* Previous letter — :has() looks ahead to check if the next sibling is hovered */
+  .char:has(+ .char:hover) {
+    font-weight: 600;
+    transform: translateY(-2px);
+  }
 }
 
 .card:hover::after {
