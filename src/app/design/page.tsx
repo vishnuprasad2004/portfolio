@@ -22,7 +22,7 @@ interface PhoneMockupProps {
 }
 
 const spaceGrotesk = Space_Grotesk({weight:"700", subsets: ["latin"]})
-const fraunces = Fraunces({weight: "variable", subsets: ["latin"], style:"italic"})
+const newsreader = Fraunces({weight:"variable", subsets: ["latin"]})
 const archivo = Archivo({weight: "variable", subsets: ["latin"]})
 
 const orientationConfig = {
@@ -121,11 +121,17 @@ const DesignPage = () => {
     
     return(
         <>
-            <div className="px-4 bg-black/1 backdrop-blur-sm">
-                <div className="pt-5 p-2 pb-0 ">
-                    <span className={archivo.className + " text-left font-[600] lg:hover:font-[800] lg:w-10 transition-[font-weight] lg:text-8xl text-4xl select-none"} ref={headingText}>GALLERY OF <br className="hidden lg:block" />DESIGNS</span>
-                    <p className={spaceGrotesk.className+" text-right my-5 text-xs lg:text-base"}>Hey there! I&apos;m Vishnu Prasad Korada, a passionate designer and developer. <br/> Welcome to my smaller version of design pinterest! </p>
+            <div className="relative w-screen h-screen bg-black">
+                <Image src={"/bg-painting.webp"} alt="Background Painting" width={1000} height={1000} className="w-screen h-screen object-cover"/>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
+                <div className="absolute inset-0 flex items-center justify-center ">
+                <div className="pt-5 p-2 pb-0 lg:w-1/2 w-full text-center">
+                    <span className={newsreader.className + " text-left font-[600] lg:hover:font-[800] lg:w-10 transition-[font-weight] lg:text-7xl text-4xl select-none"} ref={headingText}>Gallery of Designs</span>
+                    <p className={spaceGrotesk.className+" my-5 text-xs lg:text-base"}>Hey there! I&apos;m Vishnu Prasad Korada, a passionate designer and developer. <br/> Welcome to my smaller version of design pinterest! </p>
                 </div>
+                </div>
+            </div>
+            <div className="px-4 bg-black/95 backdrop-blur-sm">
                 {/* The display grid */}
 
                 <div className="grid lg:gap-6 gap-2 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 grid-auto-rows lg:px-4 py-16 w-full text-center grid-flow-dense">

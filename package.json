@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "baseline-browser-mapping": "^2.10.43",
+    "caniuse-lite": "^1.0.30001806",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^4.1.4",
     "next": "14.2.35",
