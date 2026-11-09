@@ -13,7 +13,9 @@ const ContactSection: FC = () => {
         Connect on LinkedIn
       </Link>
       <Link
-        href="mailto:vishnuprasadforwork@gmail.com"
+        href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwRrtZpSmFxmXTKbFkLqvpLkrtksHjMPlKWvCzlfSVGqjFPwTtTlRtcLRKmQtjKWNLTNbCM"
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-100"
       >
         Email Me
