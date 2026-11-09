@@ -17,6 +17,7 @@ import Loader from "@/components/Loader";
 import ExperienceSection from "@/components/layout/ExperienceSection";
 import ContactSection from "@/components/layout/ContactSection";
 import BlogSection from "@/components/layout/BlogSection";
+import { Snowfall } from "react-snowfall/lib/Snowfall";
 
 
 const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] })

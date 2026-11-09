@@ -17,6 +17,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+    "react-snowfall": "^2.4.0",
     "split-type": "^0.3.4"
   },
   "repository": {
