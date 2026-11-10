@@ -92,6 +92,15 @@ const HeroSection: FC = () => {
       <div className="h-screen flex justify-center items-center snap-start relative" id="hero">
           {/* <Image src={"/worm.png"} alt="worm" height={100} width={100} className="absolute hidden lg:block bottom-16 left-0 rotate-45 lg:hover:rotate-[-60deg] scale-110 lg:hover:translate-y-11 lg:hover:-translate-x-7 duration-500"/> */}
         <div className="flex flex-col justify-center items-center w-screen duration-700">
+          <div
+  className={`${spaceMono.className} mt-5 inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white/90`}
+>
+  <span className="relative flex h-2 w-2">
+    <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400/70 motion-reduce:animate-none" />
+    <span className="relative h-2 w-2 rounded-full bg-emerald-400" />
+  </span>
+  Open to Full-stack and Frontend roles
+</div>
           <span className={spaceMono.className + " lg:text-2xl text-xl select-none"}>Hello <div className="wave-hand inline-block" ref={handWaveRef}><Image src="/hand-wave.png" height={32} width={32} alt="hello"/></div>, I am</span>
           <span className={spaceMono.className + " lg:text-8xl select-none text-3xl my-name brightness-150 scale-0 opacity-0"} ref={nameRef} aria-label="Vishnu Prasad Korada">VishnuPrasadKorada™</span>
           <span className={spaceMono.className + " lg:text-2xl text-xl select-none opacity-0"} ref={subTitleRef} aria-label="Developer and Designer">Software Engineer & Designer</span>
